@@ -42,7 +42,7 @@ a {
 }
 
 .logo {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 800;
     letter-spacing: -0.8px;
 }
@@ -54,7 +54,7 @@ a {
 
 .nav-links a {
     color: var(--muted);
-    font-size: 14px;
+    font-size: 16px;
     transition: 0.3s ease;
 }
 
@@ -69,11 +69,11 @@ a {
 }
 
 .nav-button {
-    padding: 10px 17px;
+    padding: 11px 19px;
     border: 1px solid var(--border);
     border-radius: 9px;
     background: rgba(255, 255, 255, 0.04);
-    font-size: 14px;
+    font-size: 16px;
     transition: 0.3s ease;
 }
 
@@ -110,7 +110,7 @@ a {
     align-items: center;
     gap: 8px;
 
-    padding: 8px 13px;
+    padding: 9px 15px;
 
     border: 1px solid var(--border);
     border-radius: 50px;
@@ -119,7 +119,7 @@ a {
     backdrop-filter: blur(12px);
 
     color: #b8bac2;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .badge span {
@@ -154,12 +154,12 @@ a {
 }
 
 .hero-description {
-    max-width: 580px;
+    max-width: 620px;
     margin: 28px auto 0;
 
     color: var(--muted);
-    font-size: 16px;
-    line-height: 1.7;
+    font-size: 18px;
+    line-height: 1.75;
 }
 
 .hero-actions {
@@ -172,10 +172,10 @@ a {
 
 .primary-button,
 .secondary-button {
-    padding: 13px 19px;
+    padding: 15px 24px;
     border-radius: 10px;
 
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
 
     transition: 0.3s ease;
@@ -196,7 +196,7 @@ a {
 }
 
 .primary-button span {
-    font-size: 17px;
+    font-size: 19px;
 }
 
 .secondary-button {
@@ -222,7 +222,7 @@ a {
 
 .hero-note p {
     color: #6f727c;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .avatar-stack {
@@ -230,8 +230,8 @@ a {
 }
 
 .mini-avatar {
-    width: 27px;
-    height: 27px;
+    width: 29px;
+    height: 29px;
 
     display: flex;
     align-items: center;
@@ -244,7 +244,7 @@ a {
 
     background: var(--surface-light);
 
-    font-size: 9px;
+    font-size: 10px;
     font-weight: 700;
 }
 
@@ -341,7 +341,7 @@ a {
 
 .window-title {
     color: #777a84;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .dashboard-content {
@@ -371,7 +371,7 @@ a {
     background: white;
     color: #111;
 
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 800;
 }
 
@@ -391,13 +391,13 @@ a {
     border-radius: 8px;
 
     color: #696c75;
-    font-size: 10px;
+    font-size: 12px;
 
     text-align: left;
 }
 
 .menu-item span {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .menu-item.active {
@@ -420,11 +420,11 @@ a {
     margin-bottom: 5px;
 
     color: #6f727c;
-    font-size: 9px;
+    font-size: 11px;
 }
 
 .dashboard-top h2 {
-    font-size: 20px;
+    font-size: 22px;
     letter-spacing: -0.7px;
 }
 
@@ -441,7 +441,7 @@ a {
 
     background: #191b21;
 
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 700;
 }
 
@@ -499,14 +499,14 @@ a {
 }
 
 .profile-body h3 {
-    font-size: 15px;
+    font-size: 17px;
 }
 
 .profile-body p {
     margin-top: 5px;
 
     color: #737680;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .profile-status {
@@ -523,7 +523,7 @@ a {
     border-radius: 50px;
 
     color: #878a94;
-    font-size: 8px;
+    font-size: 10px;
 }
 
 .profile-status span {
@@ -553,11 +553,11 @@ a {
     margin-bottom: 7px;
 
     color: #6f727c;
-    font-size: 9px;
+    font-size: 11px;
 }
 
 .stat-item strong {
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .active-text {
@@ -589,7 +589,7 @@ a {
 /* SECTION HEADINGS (shared) */
 
 .section-heading {
-    max-width: 600px;
+    max-width: 620px;
     margin: 0 auto 45px;
     text-align: center;
 }
@@ -598,13 +598,13 @@ a {
     margin-bottom: 12px;
 
     color: #9b7cff;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 700;
     letter-spacing: 2px;
 }
 
 .section-heading h2 {
-    font-size: clamp(28px, 4vw, 42px);
+    font-size: clamp(32px, 4.5vw, 48px);
     letter-spacing: -1.5px;
 }
 
@@ -627,7 +627,7 @@ a {
 
 .about-card > p {
     color: var(--muted);
-    font-size: 15px;
+    font-size: 17px;
     line-height: 1.9;
 }
 
@@ -649,7 +649,7 @@ a {
     gap: 8px;
 
     color: #d5d6db;
-    font-size: 13px;
+    font-size: 15px;
 
     transition: 0.3s ease;
 }
@@ -669,7 +669,7 @@ a {
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.06);
 
-    font-size: 12px;
+    font-size: 13px;
 }
 
 /* SKILLS */
@@ -703,7 +703,7 @@ a {
 }
 
 .skill-card h3 {
-    font-size: 14px;
+    font-size: 16px;
     color: var(--accent-light);
 }
 
@@ -711,7 +711,7 @@ a {
     margin-top: 10px;
 
     color: var(--muted);
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.6;
 }
 
@@ -724,7 +724,7 @@ a {
     margin-bottom: 16px;
 
     color: var(--muted);
-    font-size: 12px;
+    font-size: 14px;
     letter-spacing: 1px;
 }
 
@@ -736,14 +736,14 @@ a {
 }
 
 .tools-tags span {
-    padding: 8px 16px;
+    padding: 9px 18px;
 
     border: 1px solid var(--border);
     border-radius: 50px;
 
     background: rgba(255, 255, 255, 0.03);
 
-    font-size: 12px;
+    font-size: 14px;
     color: #d5d6db;
 }
 
@@ -792,19 +792,19 @@ a {
     border-radius: 9px;
 
     color: var(--accent-light);
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 700;
 }
 
 .feature-card h3 {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .feature-card p {
     margin-top: 12px;
 
     color: var(--muted);
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.7;
 }
 
@@ -821,11 +821,11 @@ a {
 
 .projects-heading {
     margin-bottom: 18px;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .project-item h4 {
-    font-size: 15px;
+    font-size: 17px;
     color: var(--accent-light);
 }
 
@@ -833,7 +833,7 @@ a {
     margin-top: 8px;
 
     color: var(--muted);
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.8;
 }
 
@@ -846,12 +846,12 @@ a {
 }
 
 .project-tags span {
-    padding: 7px 14px;
+    padding: 8px 16px;
 
     border: 1px solid var(--border);
     border-radius: 50px;
 
-    font-size: 11px;
+    font-size: 13px;
     color: #d5d6db;
 }
 
@@ -896,14 +896,14 @@ a {
     margin-bottom: 6px;
 
     color: #9b7cff;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 700;
     letter-spacing: 1.5px;
 }
 
 .timeline-item h3 {
     margin-top: 12px;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .timeline-item h3:first-of-type {
@@ -914,7 +914,7 @@ a {
     margin-top: 4px;
 
     color: var(--muted);
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .certs {
@@ -930,7 +930,7 @@ a {
 
 .certs-heading {
     margin-bottom: 18px;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .certs-list {
@@ -946,7 +946,7 @@ a {
     position: relative;
 
     color: var(--muted);
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.6;
 }
 
@@ -990,15 +990,15 @@ a {
 
 .resume-card h2 {
     margin-top: 8px;
-    font-size: clamp(24px, 3vw, 34px);
+    font-size: clamp(26px, 3.2vw, 36px);
 }
 
 .resume-copy {
-    max-width: 420px;
+    max-width: 450px;
     margin-top: 16px;
 
     color: var(--muted);
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.8;
 }
 
@@ -1048,7 +1048,7 @@ a {
     margin-top: 12px;
 
     color: #6f727c;
-    font-size: 11px;
+    font-size: 13px;
     letter-spacing: 1px;
 }
 
@@ -1085,7 +1085,7 @@ a {
     margin-bottom: 12px;
 
     color: #d5d6db;
-    font-size: 14px;
+    font-size: 16px;
 
     transition: 0.3s ease;
 }
@@ -1105,7 +1105,7 @@ a {
     border-radius: 6px;
     background: rgba(255, 255, 255, 0.06);
 
-    font-size: 11px;
+    font-size: 12px;
 }
 
 .footer-links-grid {
@@ -1115,7 +1115,7 @@ a {
 }
 
 .footer-hire .hire-text {
-    font-size: 30px;
+    font-size: 32px;
     font-weight: 700;
     color: #fff;
 }
@@ -1126,7 +1126,7 @@ a {
 
 .footer-hire p {
     color: var(--muted);
-    font-size: 11px;
+    font-size: 13px;
     letter-spacing: 1px;
 }
 
@@ -1149,6 +1149,8 @@ a {
     user-select: none;
     pointer-events: none;
 }
+
+/* RESPONSIVE */
 
 @media (max-width: 800px) {
 
