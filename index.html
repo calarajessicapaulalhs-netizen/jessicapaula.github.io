@@ -8,640 +8,155 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 
 <body>
 
-    <header class="navbar">
-        <a href="#home" class="logo">
-            Jessica Calara
-        </a>
-
-        <nav class="nav-links">
-            <a href="#about">About me</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#experience">Experience</a>
-            <a href="#resume">Resume</a>
-        </nav>
-
-        <div class="nav-actions">
-            <a href="mailto:calara.jessicapaulalhs@gmail.com" class="nav-button">
-                Contact Me
-            </a>
-        </div>
-    </header>
-
-
+    <div class="landing-intro">
+        <div class="landing-glow landing-glow-top" aria-hidden="true"></div>
+        <div class="landing-glow landing-glow-left" aria-hidden="true"></div>
+        <header class="design-navbar">
+            <a href="#home" class="design-logo" aria-label="ALCARA Services home">ALCARA Services</a>
+            <nav class="design-nav" aria-label="Main navigation">
+                <a href="#home" aria-current="page">Home</a>
+                <a href="#about">About me</a>
+                <a href="#skills">Services</a>
+                <a href="#experience">Experience</a>
+                <a href="https://drive.google.com/file/d/13ZgsCj71YKsumlW9rZAy1fi3Ccr3QJTE/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a>
+            </nav>
+        </header>
+        <section class="design-hero" id="home" aria-labelledby="hero-title">
+            <div class="design-hero-copy">
+                <h1 id="hero-title" aria-label="Bonjur, future employer. Bonjur, hiring team."><span class="hero-greeting" aria-hidden="true"><span class="hero-fixed-greeting">Bonjur,</span> <span class="hero-word-window"><span class="hero-word-reel"><span>FUTURE EMPLOYER</span><span>HIRING TEAM</span><span>FUTURE EMPLOYER</span></span></span></span></h1>
+                <h2>I am Jessica Paula Calara<br>your next Employee</h2>
+                <p>I’m happy when I’m drinking matcha, but I’d be even happier if I received an email back from you!<br>I have so many dreams to chase and goals to achieve, but for now, I’m starting with one simple dream: to finally add that little “-ed” and turn my dream of becoming employed into a reality, hopefully as your next employee!</p>
+                <div class="design-hero-actions">
+                    <a class="design-project-button" href="#projects">See Projects</a>
+                    <a class="design-resume-button" href="https://drive.google.com/file/d/13ZgsCj71YKsumlW9rZAy1fi3Ccr3QJTE/view?usp=sharing" target="_blank" rel="noopener noreferrer">View Resume</a>
+                </div>
+            </div>
+            <div class="design-portrait">
+                <div class="landing-glow landing-glow-portrait" aria-hidden="true"></div>
+                <img src="assets/paula-portrait.jpeg" alt="Jessica Paula Calara smiling in a white Filipiniana dress" width="1364" height="2048" fetchpriority="high">
+            </div>
+        </section>
+    </div>
     <main>
-
-        <section class="hero" id="home">
-
-            <div class="blur blur-one"></div>
-            <div class="blur blur-two"></div>
-
-            <div class="hero-content">
-
-                <div class="badge">
-                    <span></span>
-                    BSIT Student — Web &amp; Mobile Development
+        <section class="featured-design" id="projects" aria-labelledby="featured-title">
+            <header class="featured-heading">
+                <h2 id="featured-title">FEATURED <span>PROJECTS</span></h2>
+                <p>These are some of my academic projects, mostly created under tight deadlines. However, my portfolio reflects my creativity, modern design approach, and full potential.</p>
+            </header>
+            <div class="featured-design-grid">
+                <div class="featured-column">
+                    <a class="featured-frame featured-slot-1" href="https://www.figma.com/proto/81elwNOhTBLdkJNuZEHL3S/STRAY-PETS-AND-LIVESTOCK-MANAGEMENT-SYSTEM--A-WEB-BASED-PLATFORM-FOR-ADOPTION--DONATION-TRACKING--AN?node-id=1021-24548&amp;t=w2MOkVEGq0imrASw-1&amp;scaling=scale-down-width&amp;content-scaling=fixed&amp;page-id=0%3A1&amp;starting-point-node-id=371%3A241" target="_blank" rel="noopener noreferrer" aria-label="View CityVet animal management website"><img class="featured-image" src="assets/featured-cityvet.png" alt="CityVet animal management website" loading="lazy"><span class="featured-arrow" aria-hidden="true">↗</span></a>
+                    <a class="featured-frame featured-slot-3" href="https://www.figma.com/proto/Xp9QXLQ87IMKG5vo7sFWJ5/Website-Pawfect?node-id=1-212&amp;t=Ow6aqWI6tLs2dfnI-1&amp;scaling=scale-down-width&amp;content-scaling=fixed&amp;page-id=0%3A1&amp;starting-point-node-id=1%3A212" target="_blank" rel="noopener noreferrer" aria-label="View Pawfect Haven mobile pet services website"><img class="featured-image" src="assets/featured-pawfect-haven.png" alt="Pawfect Haven mobile pet services website" loading="lazy"><span class="featured-arrow" aria-hidden="true">↗</span></a>
                 </div>
-
-                <h1>
-                    Aspiring
-                    <span>developer</span>,
-                    ready to intern.
-                </h1>
-
-                <p class="hero-description">
-                    I am Jessica Paula Calara, a 4th-year BSIT student majoring in
-                    Web and Mobile Development. I'm looking for an internship
-                    opportunity where I can apply my skills in development,
-                    UI/UX design, and quality assurance while learning from
-                    real-world projects.
-                </p>
-
-                <div class="hero-actions">
-                    <a href="#resume" class="primary-button">
-                        View Resume
-                        <span>→</span>
-                    </a>
-
-                    <a href="mailto:calara.jessicapaulalhs@gmail.com" class="secondary-button">
-                        Contact Me
-                    </a>
+                <div class="featured-column">
+                    <a class="featured-frame featured-slot-2" href="https://www.figma.com/proto/fFmiZiMlPbv2KHl80zYINa/HOT-WHEELS?node-id=1-2&amp;starting-point-node-id=1%3A2&amp;scaling=scale-down-width&amp;content-scaling=fixed&amp;t=3rpewKceqfw8Fus6-1" target="_blank" rel="noopener noreferrer" aria-label="View Hot Wheels website"><img class="featured-image" src="assets/featured-hot-wheels.png" alt="Hot Wheels website" loading="lazy"><span class="featured-arrow" aria-hidden="true">↗</span></a>
+                    <a class="featured-frame featured-slot-4" href="https://www.figma.com/design/AxWCQIAtQM3r9h6SmEzN2Y/Black-Street-Coffee-shop?node-id=165-769&amp;t=OcbB5vLwiufE1VoT-1" target="_blank" rel="noopener noreferrer" aria-label="View Black Street Cafe website"><img class="featured-image" src="assets/featured-black-street.png" alt="Black Street Cafe website" loading="lazy"><span class="featured-arrow" aria-hidden="true">↗</span></a>
                 </div>
-
-                <div class="hero-note">
-                    <div class="avatar-stack">
-                        <div class="mini-avatar">J</div>
-                        <div class="mini-avatar">C</div>
-                    </div>
-
-                    <p>
-                        Open for OJT / Internship placements.
-                    </p>
-                </div>
-
             </div>
-
-
-            <div class="hero-preview" id="preview">
-
-                <div class="preview-glow"></div>
-
-                <div class="dashboard-window">
-
-                    <div class="window-header">
-                        <div class="window-dots">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-
-                        <div class="window-title">
-                            Portfolio Overview
-                        </div>
-                    </div>
-
-                    <div class="dashboard-content">
-
-                        <aside class="sidebar">
-
-                            <div class="sidebar-logo">
-                                J
-                            </div>
-
-                            <div class="sidebar-menu">
-
-                                <div class="menu-item active">
-                                    <span>⌂</span>
-                                    Overview
-                                </div>
-
-                                <div class="menu-item">
-                                    <span>◯</span>
-                                    About
-                                </div>
-
-                                <div class="menu-item">
-                                    <span>◈</span>
-                                    Projects
-                                </div>
-
-                                <div class="menu-item">
-                                    <span>⚙</span>
-                                    Resume
-                                </div>
-
-                            </div>
-
-                        </aside>
-
-
-                        <div class="dashboard-main">
-
-                            <div class="dashboard-top">
-
-                                <div>
-                                    <p class="small-text">
-                                        Welcome
-                                    </p>
-
-                                    <h2>
-                                        Jessica Paula
-                                    </h2>
-                                </div>
-
-                                <div class="dashboard-avatar">
-                                    J
-                                </div>
-
-                            </div>
-
-
-                            <div class="dashboard-grid">
-
-                                <div class="profile-preview-card">
-
-                                    <div class="profile-cover"></div>
-
-                                    <div class="profile-body">
-
-                                        <div class="profile-avatar">
-                                            J
-                                        </div>
-
-                                        <h3>
-                                            Jessica Paula Calara
-                                        </h3>
-
-                                        <p>
-                                            BS Information Technology
-                                        </p>
-
-                                        <div class="profile-status">
-                                            <span></span>
-                                            Seeking Internship
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-
-                                <div class="stats-card">
-
-                                    <div class="stat-item">
-                                        <span class="stat-label">
-                                            Skills learned
-                                        </span>
-
-                                        <strong>
-                                            12+
-                                        </strong>
-
-                                        <div class="progress">
-                                            <span></span>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="stat-item">
-                                        <span class="stat-label">
-                                            Status
-                                        </span>
-
-                                        <strong class="active-text">
-                                            Available for OJT
-                                        </strong>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
+        </section>
+        <div class="portfolio-profile-background">
+        <section class="portfolio-design" aria-labelledby="portfolio-title">
+            <header class="portfolio-design-heading">
+                <h2 id="portfolio-title">MY PORTFOLIO</h2>
+                <p>Below is my portfolio. Feel free to explore my work and projects showcasing<br class="portfolio-line-break"> my skills in UI/UX design and creative development.</p>
+            </header>
+            <div class="portfolio-row">
+                <h3 id="website-title">Website View</h3>
+                <div class="portfolio-track" tabindex="0" role="region" aria-labelledby="website-title" aria-label="Website View projects">
+                    <a class="portfolio-tile" href="assets/web-paula-dental.png" target="_blank" rel="noopener noreferrer"><img class="portfolio-image" src="assets/web-paula-dental.png" alt="Paula Dental Care website preview" width="254" height="206" loading="lazy" draggable="false"><span class="portfolio-caption">Paula Dental Care</span></a>
+                    <a class="portfolio-tile" href="https://www.figma.com/proto/Xp9QXLQ87IMKG5vo7sFWJ5/Website-Pawfect?node-id=1-212&amp;t=Ow6aqWI6tLs2dfnI-1&amp;scaling=scale-down-width&amp;content-scaling=fixed&amp;page-id=0%3A1&amp;starting-point-node-id=1%3A212" target="_blank" rel="noopener noreferrer"><img class="portfolio-image" src="assets/web-pawfect-haven.png" alt="Pawfect Haven website preview" width="254" height="206" loading="lazy" draggable="false"><span class="portfolio-caption">Pawfect Haven</span></a>
+                    <a class="portfolio-tile" href="https://www.figma.com/proto/fFmiZiMlPbv2KHl80zYINa/HOT-WHEELS?node-id=1-2&amp;starting-point-node-id=1%3A2&amp;scaling=scale-down-width&amp;content-scaling=fixed&amp;t=3rpewKceqfw8Fus6-1" target="_blank" rel="noopener noreferrer"><img class="portfolio-image" src="assets/web-hot-wheels.png" alt="Hot Wheels website preview" width="254" height="206" loading="lazy" draggable="false"><span class="portfolio-caption">Hot Wheels</span></a>
+                    <a class="portfolio-tile" href="https://www.figma.com/proto/utfKb3OcqZiE7Q1DrbEqT4/Untitled?node-id=2-46&amp;t=lNlt4BPExKhlneKA-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=0%3A1" target="_blank" rel="noopener noreferrer"><img class="portfolio-image" src="assets/web-roofing.png" alt="Roofing Company website preview" width="254" height="206" loading="lazy" draggable="false"><span class="portfolio-caption">Roofing Company</span></a>
+                    <a class="portfolio-tile" href="https://www.figma.com/design/AxWCQIAtQM3r9h6SmEzN2Y/Black-Street-Coffee-shop?node-id=165-769&amp;t=OcbB5vLwiufE1VoT-1" target="_blank" rel="noopener noreferrer"><img class="portfolio-image" src="assets/web-coffee.png" alt="Black Street Coffee Shop website preview" width="254" height="206" loading="lazy" draggable="false"><span class="portfolio-caption">Black Street Coffee Shop</span></a>
+                    <a class="portfolio-tile" href="https://www.figma.com/proto/81elwNOhTBLdkJNuZEHL3S/STRAY-PETS-AND-LIVESTOCK-MANAGEMENT-SYSTEM--A-WEB-BASED-PLATFORM-FOR-ADOPTION--DONATION-TRACKING--AN?node-id=1021-24548&amp;t=w2MOkVEGq0imrASw-1&amp;scaling=scale-down-width&amp;content-scaling=fixed&amp;page-id=0%3A1&amp;starting-point-node-id=371%3A241" target="_blank" rel="noopener noreferrer"><img class="portfolio-image" src="assets/web-stray-animals.png" alt="Stray Animals website preview" width="254" height="206" loading="lazy" draggable="false"><span class="portfolio-caption">Stray Animals</span></a>
                 </div>
-
             </div>
-
+            <div class="portfolio-row">
+                <h3 id="mobile-title">Mobile View</h3>
+                <div class="portfolio-track" tabindex="0" role="region" aria-labelledby="mobile-title" aria-label="Mobile View projects">
+                    <a class="portfolio-tile" href="https://www.figma.com/proto/utfKb3OcqZiE7Q1DrbEqT4/Untitled?node-id=2-46&amp;t=lNlt4BPExKhlneKA-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=0%3A1" target="_blank" rel="noopener noreferrer"><span class="portfolio-blank" aria-hidden="true"></span><span class="portfolio-caption">Roofing Company Landing Page</span></a>
+                    <a class="portfolio-tile" href="https://www.figma.com/proto/81elwNOhTBLdkJNuZEHL3S/STRAY-PETS-AND-LIVESTOCK-MANAGEMENT-SYSTEM--A-WEB-BASED-PLATFORM-FOR-ADOPTION--DONATION-TRACKING--AN?node-id=665-3757&amp;t=XXLfjOYJHlNX02OM-1&amp;scaling=scale-down-width&amp;content-scaling=fixed&amp;page-id=0%3A1&amp;starting-point-node-id=371%3A241" target="_blank" rel="noopener noreferrer"><span class="portfolio-blank" aria-hidden="true"></span><span class="portfolio-caption">Stray Pets &amp; Livestock Management System — Admin View</span></a>
+                    <a class="portfolio-tile" href="https://www.figma.com/proto/oH8XFMemm99wltHMS5WjN4/WEBSITE-PORTFOLIO?node-id=103-76&amp;starting-point-node-id=103%3A76&amp;scaling=scale-down-width&amp;content-scaling=fixed&amp;t=S7Bw6NfV4PNyimjU-1" target="_blank" rel="noopener noreferrer"><span class="portfolio-blank" aria-hidden="true"></span><span class="portfolio-caption">UI/UX Personal Portfolio Website</span></a>
+                    <a class="portfolio-tile" href="https://www.figma.com/proto/81elwNOhTBLdkJNuZEHL3S/STRAY-PETS-AND-LIVESTOCK-MANAGEMENT-SYSTEM--A-WEB-BASED-PLATFORM-FOR-ADOPTION--DONATION-TRACKING--AN?node-id=1021-24548&amp;t=w2MOkVEGq0imrASw-1&amp;scaling=scale-down-width&amp;content-scaling=fixed&amp;page-id=0%3A1&amp;starting-point-node-id=371%3A241" target="_blank" rel="noopener noreferrer"><span class="portfolio-blank" aria-hidden="true"></span><span class="portfolio-caption">Stray Pets &amp; Livestock Management System — Public View</span></a>
+                    <a class="portfolio-tile" href="https://www.figma.com/design/AxWCQIAtQM3r9h6SmEzN2Y/Black-Street-Coffee-shop?node-id=165-769&amp;t=OcbB5vLwiufE1VoT-1" target="_blank" rel="noopener noreferrer"><span class="portfolio-blank" aria-hidden="true"></span><span class="portfolio-caption">Black Street Coffee Shop</span></a>
+                </div>
+            </div>
         </section>
 
 
-        <section class="about" id="about">
-
-            <div class="section-heading">
-                <p class="section-label">ABOUT ME</p>
-                <h2>4th-year BSIT student, Web &amp; Mobile Development.</h2>
-            </div>
-
-            <div class="about-card">
-
-                <p>
-                    I am currently pursuing a
-                    <strong>Bachelor of Science in Information and Communication
-                    Technology, Major in Web and Mobile Development</strong>
-                    and expected to graduate in <strong>2027</strong>. I am
-                    currently looking for an <strong>internship / OJT
-                    placement</strong> where I can apply my skills, knowledge,
-                    and passion for technology in real-world environments.
-                    I have developed a portfolio showcasing my projects,
-                    skills, and continuous learning journey for your review.
-                </p>
-
-                <div class="about-contact">
-
-                    <a href="mailto:calara.jessicapaulalhs@gmail.com">
-                        <span class="icon">✉</span>
-                        calara.jessicapaulalhs@gmail.com
-                    </a>
-
-                    <a href="tel:+639455232081">
-                        <span class="icon">☎</span>
-                        +63 945 523 2081
-                    </a>
-
-                    <span class="about-location">
-                        <span class="icon">◎</span>
-                        Macabebe, Pampanga
-                    </span>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <section class="skills" id="skills">
-
-            <div class="section-heading">
-                <p class="section-label">TECHNICAL SKILLS</p>
-                <h2>What I bring to the table.</h2>
-            </div>
-
-            <div class="skills-grid">
-
-                <div class="skill-card">
-                    <h3>Languages</h3>
-                    <p>Java, Python, JavaScript</p>
-                </div>
-
-                <div class="skill-card">
-                    <h3>Web</h3>
-                    <p>HTML, CSS, React.js</p>
-                </div>
-
-                <div class="skill-card">
-                    <h3>UI/UX</h3>
-                    <p>Figma, Wireframing, Prototyping, User Flow</p>
-                </div>
-
-                <div class="skill-card">
-                    <h3>Quality Assurance</h3>
-                    <p>Manual Testing, Functional Testing, Test Case Design, Bug Reporting</p>
-                </div>
-
-                <div class="skill-card">
-                    <h3>Database / Backend</h3>
-                    <p>MySQL, Firebase</p>
-                </div>
-
-                <div class="skill-card">
-                    <h3>Markup</h3>
-                    <p>XML</p>
-                </div>
-
-            </div>
-
-            <div class="tools-row">
-
-                <p class="tools-label">Tools &amp; Software</p>
-
-                <div class="tools-tags">
-                    <span>Visual Studio Code</span>
-                    <span>Figma</span>
-                    <span>Git &amp; GitHub</span>
-                    <span>Firebase</span>
-                    <span>Supabase</span>
-                    <span>Google Sheets</span>
-                    <span>Canva</span>
-                    <span>Android Studio</span>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <section class="services" id="focus">
-
-            <div class="section-heading">
-                <p class="section-label">FOCUS AREAS</p>
-                <h2>What I want to grow in.</h2>
-            </div>
-
-            <div class="feature-grid">
-
-                <article class="feature-card">
-                    <div class="feature-icon">01</div>
-                    <h3>Web &amp; Mobile Development</h3>
-                    <p>
-                        Building responsive websites and mobile-friendly
-                        interfaces using HTML, CSS, JavaScript, React.js,
-                        and Android Studio.
-                    </p>
+        </div>
+        <div class="profile-experience-background">
+        <section class="profile-design" id="about" aria-labelledby="profile-title">
+            <header class="profile-heading">
+                <h2 id="profile-title">JESSICA CALARA, <span>Web Developer</span></h2>
+                <p>These are my current services offered. This list will be updated and expanded soon as I continue to improve my skills and take on new projects.</p>
+            </header>
+            <div class="profile-design-grid">
+                <aside class="profile-contact-card" aria-label="Paula's contact details">
+                    <img src="assets/paula-portrait.jpeg" alt="Jessica Paula Calara" width="1364" height="2048" loading="lazy">
+                    <div class="profile-contact-line"><span class="social-mark instagram-mark" aria-hidden="true">◎</span><span>@alclrpaula</span></div>
+                    <div class="profile-contact-line"><span class="social-mark facebook-mark" aria-hidden="true">f</span><span>Jessica Paula Calara</span></div>
+                    <a class="profile-contact-line" href="mailto:calara.jessicapaulalhs@gmail.com"><span class="social-mark mail-mark" aria-hidden="true">M</span><span>calara.jessicapaulalhs@gmail.com</span></a>
+                </aside>
+                <article class="profile-summary-card">
+                    <h3>PROFESSIONAL SUMMARY</h3>
+                    <p>Information Technology student specializing in Web and Mobile Development with hands-on experience in web application development, system development, UI/UX design, requirements documentation, and quality assurance. Skilled in Java, Python, Django, JavaScript, HTML, CSS, React.js, MySQL, Firebase, and Supabase. Experienced in developing and testing CRUD-based systems, working with APIs, creating responsive web interfaces, and translating system requirements into UI/UX designs, prototypes, and user flows. Familiar with the full software development process, from requirements gathering to testing and deployment</p>
                 </article>
-
-                <article class="feature-card">
-                    <div class="feature-icon">02</div>
-                    <h3>UI/UX Design</h3>
-                    <p>
-                        Wireframes, prototypes, and user flows designed to make
-                        digital products clean, simple, and easy to use.
-                    </p>
-                </article>
-
-                <article class="feature-card">
-                    <div class="feature-icon">03</div>
-                    <h3>Quality Assurance</h3>
-                    <p>
-                        Manual and functional testing, test case design, and
-                        bug reporting to help ensure reliable systems.
-                    </p>
-                </article>
-
             </div>
-
-            <div class="projects-list">
-
-                <h3 class="projects-heading">Featured Project</h3>
-
-                <div class="project-item">
-                    <h4>CityVet Stray Animals Management System</h4>
-                    <p>
-                        Proposed and designed a responsive website for animal
-                        adoption, donation tracking, and stray animal reporting.
-                        Contributed to the system development, led system testing,
-                        and helped prepare the system for publishing.
-                    </p>
-                </div>
-
-                <div class="project-tags">
-                    <span>Mobile App UI Mockup</span>
-                    <span>UI/UX Website Design (Figma)</span>
-                    <span>System Planning</span>
-                    <span>System Requirements</span>
-                    <span>Website Management System</span>
-                </div>
-
+        </section>
+        <section class="technical-design" id="skills" aria-labelledby="technical-title">
+            <div class="technical-grid">
+                <header class="technical-heading"><h2 id="technical-title">Technical <span>Skills</span></h2><p>These are my current services offered. This list will be updated and expanded soon as I continue to improve my skills and take on new projects.</p></header>
+                <div class="technical-pill technical-ai">Prompt Engineering, AI Workflow Automation</div>
+                <article class="technical-pill technical-purple"><h3>Front end</h3><p>HTML, CSS, Responsive Web Design, XML</p></article>
+                <article class="technical-pill technical-purple"><h3>Frameworks</h3><p>Django, React.js, Node.js</p></article>
+                <article class="technical-pill technical-gray"><h3>Programming and Development</h3><p>Java, Python, JavaScript, Django</p></article>
+                <article class="technical-pill technical-gray"><h3>Database and API</h3><p>MySQL, Firebase, Supabase, SQLite, PostgreSQL</p></article>
+                <article class="technical-pill technical-purple"><h3>UI/UX Design</h3><p>Figma, Wireframing, Prototyping, User Flow Design</p></article>
+                <article class="technical-pill technical-purple technical-qa"><h3>Quality Assurance</h3><p>Manual Testing, Functional Testing, Test Case Design, Bug Reporting</p></article>
             </div>
-
+            <div class="productivity-design"><h2>Tools, <span>Productivity</span></h2><div class="productivity-tags">
+                <span>Visual Studio</span>
+                <span>Git, GitHub</span>
+                <span>Android Studio</span>
+                <span>MySQL Workbench</span>
+                <span>Figma</span>
+                <span>Chrome DevTools</span>
+                <span>Microsoft Excel</span>
+                <span>Microsoft tools</span>
+            </div></div>
         </section>
 
-
-        <section class="projects-showcase" id="projects">
-
-            <div class="section-heading">
-                <p class="section-label">PROJECTS</p>
-                <h2>UI/UX Design Work</h2>
+        <section class="work-design" id="experience" aria-labelledby="work-title">
+            <h2 id="work-title">Work <span>Experience</span></h2>
+            <article class="work-entry">
+                <h3>Freelance UI/UX Design and System Development — <span>2026</span></h3>
+                <ul>
+                    <li>Ranked 1st among multiple design entries submitted for the client's website project. Including landing page and admin page</li>
+                    <li>Documented client requirements and translated them into UI/UX designs, interactive prototypes, and user flows for a mobile pet services business.</li>
+                </ul>
+            </article>
+            <article class="work-entry">
+                <h3>Freelance Basketball Statistics &amp; Content Editor — <span>Basketball League 2025–2026</span></h3>
+                <p>Managed and edited official league content, including game schedules, Player of the Game recognitions, championship results, and other league postings.</p>
+            </article>
+            <div class="work-image-grid" aria-label="Work samples to be added">
+                <div class="work-image-placeholder" aria-label="Basketball content image space"></div>
+                <div class="work-image-placeholder" aria-label="Website design image space"></div>
             </div>
-
-            <!--
-                NOTE: Each project card currently uses a styled placeholder thumbnail
-                (gradient background + initials) instead of a real screenshot.
-                To swap in an actual PNG, add an <img> tag as the FIRST child inside
-                the matching ".project-thumb" div, before the ".project-thumb-fallback"
-                div, e.g.:
-
-                <div class="project-thumb">
-                    <img src="assets/projects/pawfect-haven.png" alt="Pawfect Haven UI design">
-                    <div class="project-thumb-fallback"> ... </div>
-                </div>
-
-                The fallback will only show if the image fails to load.
-            -->
-
-            <div class="projects-grid">
-
-                <a class="project-card" href="https://www.figma.com/proto/81elwNOhTBLdkJNuZEHL3S/STRAY-PETS-AND-LIVESTOCK-MANAGEMENT-SYSTEM--A-WEB-BASED-PLATFORM-FOR-ADOPTION--DONATION-TRACKING--AN?node-id=1021-24548&amp;t=w2MOkVEGq0imrASw-1&amp;scaling=scale-down-width&amp;content-scaling=fixed&amp;page-id=0%3A1&amp;starting-point-node-id=371%3A241" target="_blank" rel="noopener noreferrer">
-
-                    <div class="project-thumb">
-                        <div class="project-thumb-fallback">
-                            <span class="icon-badge">SP</span>
-                        </div>
-                        <div class="project-overlay">View Prototype →</div>
-                    </div>
-
-                    <div class="project-info">
-                        <span class="project-tag">2026 · Capstone Project</span>
-                        <h3 class="project-card-title">Stray Pets &amp; Livestock Management System — Public View</h3>
-                        <p class="project-card-desc">
-                            The capstone project for a web-based platform supporting animal
-                            adoption, donation tracking, and stray animal reporting. This
-                            prototype presents the interface designed for the general public.
-                        </p>
-                    </div>
-
-                </a>
-
-
-                <a class="project-card" href="https://www.figma.com/proto/81elwNOhTBLdkJNuZEHL3S/STRAY-PETS-AND-LIVESTOCK-MANAGEMENT-SYSTEM--A-WEB-BASED-PLATFORM-FOR-ADOPTION--DONATION-TRACKING--AN?node-id=665-3757&amp;t=XXLfjOYJHlNX02OM-1&amp;scaling=scale-down-width&amp;content-scaling=fixed&amp;page-id=0%3A1&amp;starting-point-node-id=371%3A241" target="_blank" rel="noopener noreferrer">
-
-                    <div class="project-thumb">
-                        <div class="project-thumb-fallback">
-                            <span class="icon-badge">SP</span>
-                        </div>
-                        <div class="project-overlay">View Prototype →</div>
-                    </div>
-
-                    <div class="project-info">
-                        <span class="project-tag">2026 · Capstone Project</span>
-                        <h3 class="project-card-title">Stray Pets &amp; Livestock Management System — Admin View</h3>
-                        <p class="project-card-desc">
-                            The administrative side of the same capstone system, built to
-                            manage adoption requests, donation records, and reported cases
-                            behind the scenes.
-                        </p>
-                    </div>
-
-                </a>
-
-
-                <a class="project-card" href="https://stray-animal-management.web.app/" target="_blank" rel="noopener noreferrer">
-
-                    <div class="project-thumb">
-                        <div class="project-thumb-fallback">
-                            <span class="icon-badge">SP</span>
-                        </div>
-                        <div class="project-overlay">Visit Live Site →</div>
-                    </div>
-
-                    <div class="project-info">
-                        <span class="project-tag">2026 · Live Deployment (Testing)</span>
-                        <h3 class="project-card-title">Stray Pets &amp; Livestock Management System — Live Website</h3>
-                        <p class="project-card-desc">
-                            The deployed version of the capstone system, currently undergoing
-                            testing and refinement.
-                        </p>
-                    </div>
-
-                </a>
-
-
-                <a class="project-card" href="https://www.figma.com/proto/oH8XFMemm99wltHMS5WjN4/WEBSITE-PORTFOLIO?node-id=103-76&amp;starting-point-node-id=103%3A76&amp;scaling=scale-down-width&amp;content-scaling=fixed&amp;t=S7Bw6NfV4PNyimjU-1" target="_blank" rel="noopener noreferrer">
-
-                    <div class="project-thumb">
-                        <div class="project-thumb-fallback">
-                            <span class="icon-badge">WP</span>
-                        </div>
-                        <div class="project-overlay">View Prototype →</div>
-                    </div>
-
-                    <div class="project-info">
-                        <span class="project-tag">2026 · Personal Project</span>
-                        <h3 class="project-card-title">UI/UX Personal Portfolio Website</h3>
-                        <p class="project-card-desc">
-                            A personal portfolio designed in Figma to support freelance
-                            opportunities as a UI/UX designer. Development was paused due to
-                            a heavier academic workload.
-                        </p>
-                    </div>
-
-                </a>
-
-
-                <a class="project-card" href="https://www.figma.com/proto/fFmiZiMlPbv2KHl80zYINa/HOT-WHEELS?node-id=1-2&amp;starting-point-node-id=1%3A2&amp;scaling=scale-down-width&amp;content-scaling=fixed&amp;t=3rpewKceqfw8Fus6-1" target="_blank" rel="noopener noreferrer">
-
-                    <div class="project-thumb">
-                        <div class="project-thumb-fallback">
-                            <span class="icon-badge">HW</span>
-                        </div>
-                        <div class="project-overlay">View Prototype →</div>
-                    </div>
-
-                    <div class="project-info">
-                        <span class="project-tag">2025 · Ongoing Hobby Project</span>
-                        <h3 class="project-card-title">Hot Wheels Landing Page</h3>
-                        <p class="project-card-desc">
-                            An ongoing personal project inspired by a love for Hot Wheels,
-                            exploring bold and playful visual design for a landing page concept.
-                        </p>
-                    </div>
-
-                </a>
-
-
-                <a class="project-card" href="https://www.figma.com/proto/Xp9QXLQ87IMKG5vo7sFWJ5/Website-Pawfect?node-id=1-212&amp;t=Ow6aqWI6tLs2dfnI-1&amp;scaling=scale-down-width&amp;content-scaling=fixed&amp;page-id=0%3A1&amp;starting-point-node-id=1%3A212" target="_blank" rel="noopener noreferrer">
-
-                    <div class="project-thumb">
-                        <div class="project-thumb-fallback">
-                            <span class="icon-badge">PH</span>
-                        </div>
-                        <div class="project-overlay">View Prototype →</div>
-                    </div>
-
-                    <div class="project-info">
-                        <span class="project-tag">2025 · Client Project</span>
-                        <h3 class="project-card-title">Pawfect Haven</h3>
-                        <p class="project-card-desc">
-                            A client project completed over five days of part-time work, plus
-                            one additional day for final revisions. The design followed the
-                            client's preferred color palette and visual direction.
-                        </p>
-                    </div>
-
-                </a>
-
-
-                <a class="project-card" href="https://www.figma.com/design/AxWCQIAtQM3r9h6SmEzN2Y/Black-Street-Coffee-shop?node-id=165-769&amp;t=OcbB5vLwiufE1VoT-1" target="_blank" rel="noopener noreferrer">
-
-                    <div class="project-thumb">
-                        <div class="project-thumb-fallback">
-                            <span class="icon-badge">BC</span>
-                        </div>
-                        <div class="project-overlay">View Design →</div>
-                    </div>
-
-                    <div class="project-info">
-                        <span class="project-tag">2025 · School Activity</span>
-                        <h3 class="project-card-title">Black Street Coffee Shop</h3>
-                        <p class="project-card-desc">
-                            A short-timeframe school activity focused on designing a coffee
-                            shop website with a warm and inviting visual identity.
-                        </p>
-                    </div>
-
-                </a>
-
-
-                <a class="project-card" href="https://www.figma.com/proto/utfKb3OcqZiE7Q1DrbEqT4/Untitled?node-id=2-46&amp;t=lNlt4BPExKhlneKA-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=0%3A1" target="_blank" rel="noopener noreferrer">
-
-                    <div class="project-thumb">
-                        <div class="project-thumb-fallback">
-                            <span class="icon-badge">RC</span>
-                        </div>
-                        <div class="project-overlay">View Prototype →</div>
-                    </div>
-
-                    <div class="project-info">
-                        <span class="project-tag">2024 · School Activity</span>
-                        <h3 class="project-card-title">Roofing Company Landing Page</h3>
-                        <p class="project-card-desc">
-                            A one-day school exercise focused on quickly designing a landing
-                            page concept for a roofing company.
-                        </p>
-                    </div>
-
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <section class="experience" id="experience">
-
-            <div class="section-heading">
-                <p class="section-label">EDUCATION &amp; TRAINING</p>
-                <h2>Where I've been.</h2>
-            </div>
-
-            <!--
-                Client-based work experience, shown above the education timeline.
-            -->
-
-            <div class="timeline" style="margin-bottom: 55px;">
-
-                <div class="timeline-item">
-                    <span class="timeline-dot"></span>
-                    <p class="timeline-stage">Experience</p>
-
-                    <h3>Basketball Statistics &amp; Content Editor — Marcellius Basketball League</h3>
-                    <p class="timeline-meta">2025 – 2026 · Paid, 3-Month Engagement</p>
-                    <p style="margin-top: 8px; color: var(--muted); font-size: 15px; line-height: 1.7;">
-                        Managed and edited official league content, including game
-                        schedules, Player of the Game recognitions, championship results,
-                        and other league postings.
-                    </p>
-
-                    <h3 style="margin-top: 24px;">UI/UX Designer &amp; System Development Contributor — Pawfect Haven (Client-Based Work)</h3>
-                    <p class="timeline-meta">2025</p>
-                    <ul style="margin-top: 8px; padding-left: 18px; color: var(--muted); font-size: 15px; line-height: 1.8;">
-                        <li>Ranked 1st among multiple design entries submitted for the project.</li>
-                        <li>Gathered and documented system requirements based on client needs and project objectives.</li>
-                    </ul>
-                </div>
-
-            </div>
-
+            <details class="work-education"><summary>Education &amp; Training</summary>
             <div class="timeline">
 
                 <div class="timeline-item">
@@ -688,118 +203,35 @@
 
             </div>
 
+            </details>
         </section>
 
 
-        <section class="resume-cta" id="resume">
-
-            <div class="resume-card">
-
-                <div>
-                    <p class="section-label">RESUME</p>
-                    <h2>Looking for an intern?</h2>
-                    <p class="resume-copy">
-                        I'm currently looking for an internship / OJT placement
-                        in web and mobile development. If my skills match what
-                        your team needs, I'd love to hear from you.
-                    </p>
-                </div>
-
-                <div class="resume-actions">
-                    <a href="mailto:calara.jessicapaulalhs@gmail.com" class="primary-button">
-                        Email Me
-                    </a>
-
-                    <a href="https://drive.google.com/file/d/13ZgsCj71YKsumlW9rZAy1fi3Ccr3QJTE/view?usp=sharing" class="secondary-button" target="_blank" rel="noopener noreferrer">
-                        View Resume/CV
-                    </a>
-                </div>
-
-            </div>
-
-        </section>
-
+        </div>
     </main>
 
 
-    <footer class="site-footer">
-
-        <div class="footer-top">
-
-            <div>
-                <h2 class="footer-heading">
-                    Let's Work <span>Together</span>
-                </h2>
-
-                <p class="footer-copy">
-                    © 2026 Jessica Paula Calara
-                </p>
-            </div>
-
-            <a href="mailto:calara.jessicapaulalhs@gmail.com" class="nav-button footer-badge">
-                Jessica Calara
-            </a>
-
+    <footer class="design-footer">
+        <div class="design-footer-top">
+            <div><h2><span>Let’s</span> Work Together</h2><p class="design-footer-copyright">© 2026 ALCARA Services</p></div>
+            <a href="#home" class="design-logo">ALCARA Services</a>
         </div>
-
-
-        <div class="footer-columns">
-
-            <div class="footer-col">
-                <h3>Social</h3>
-
-                <a href="https://www.linkedin.com/in/jessica-paula-calara-50a306341/" target="_blank" rel="noopener noreferrer">
-                    <span class="icon">in</span>
-                    LinkedIn
-                </a>
-
-                <a href="https://www.facebook.com/paangss/" target="_blank" rel="noopener noreferrer">
-                    <span class="icon">f</span>
-                    Facebook
-                </a>
+        <div class="design-footer-columns">
+            <div class="design-footer-social"><h3>Social</h3>
+                <p><span class="social-mark instagram-mark" aria-hidden="true">◎</span> @alclrpaula</p>
+                <a href="https://www.facebook.com/paangss/" target="_blank" rel="noopener noreferrer"><span class="social-mark facebook-mark" aria-hidden="true">f</span> Jessica Paula Calara</a>
+                <a href="mailto:calara.jessicapaulalhs@gmail.com"><span class="social-mark mail-mark" aria-hidden="true">M</span> calara.jessicapaulalhs@gmail.com</a>
             </div>
-
-            <div class="footer-col">
-                <h3>Menu</h3>
-
-                <div class="footer-links-grid">
-                    <a href="#home">Home</a>
-                    <a href="#about">About me</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#experience">Experience</a>
-                    <a href="#resume">Resume</a>
-                </div>
-            </div>
-
-            <div class="footer-col">
-                <h3>Contact</h3>
-
-                <p>+63 945 523 2081</p>
-
-                <a href="mailto:calara.jessicapaulalhs@gmail.com">
-                    calara.jessicapaulalhs@gmail.com
-                </a>
-            </div>
-
-            <div class="footer-col footer-hire">
-                <h3 class="hire-text">
-                    HIRE <span>ME</span>
-                </h3>
-
-                <p>BE MY FIRST CLIENT</p>
-            </div>
-
+            <nav aria-label="Footer navigation"><h3>Menu</h3><div class="design-footer-menu">
+                <a href="#home">Home</a><a href="#about">About me</a><a href="#skills">Services</a><a href="#experience">Experience</a><a href="https://drive.google.com/file/d/13ZgsCj71YKsumlW9rZAy1fi3Ccr3QJTE/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a>
+            </div></nav>
+            <div class="design-footer-contact"><h3>Contact</h3><a href="tel:+639455232081">+639455232081</a><a href="mailto:calara.jessicapaulalhs@gmail.com">calara.jessicapaulalhs@gmail.com</a></div>
+            <a class="design-footer-hire" href="mailto:calara.jessicapaulalhs@gmail.com"><span>HI</span>RE ME</a>
         </div>
-
-
-        <div class="footer-watermark">
-            CALARA
-        </div>
-
+        <div class="design-footer-wordmark" aria-hidden="true">ALCARA</div>
     </footer>
 
-    <script src="js/script.js?v=2"></script>
+    <script src="js/script.js?v=3"></script>
 
 </body>
 </html>

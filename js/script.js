@@ -1,3 +1,58 @@
+// Scroll-reveal: each major section fades/slides in once as it enters
+// the viewport. Deliberately one reveal per section (not per card) to
+// avoid the generic "everything staggers in" effect, and respects the
+// visitor's reduced-motion preference.
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const revealEls = document.querySelectorAll(".reveal");
+
+if (!prefersReducedMotion && "IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver(
+        function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("is-visible");
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.15, rootMargin: "0px 0px -60px 0px" }
+    );
+
+    revealEls.forEach(function (el) {
+        revealObserver.observe(el);
+    });
+} else {
+    revealEls.forEach(function (el) {
+        el.classList.add("is-visible");
+    });
+}
+
+// Light / Dark mode toggle
+const themeToggle = document.getElementById("themeToggle");
+const root = document.documentElement;
+
+function applyTheme(theme) {
+    if (theme === "light") {
+        root.setAttribute("data-theme", "light");
+        if (themeToggle) themeToggle.textContent = "☀️";
+    } else {
+        root.removeAttribute("data-theme");
+        if (themeToggle) themeToggle.textContent = "🌙";
+    }
+}
+
+const savedTheme = localStorage.getItem("theme");
+applyTheme(savedTheme === "light" ? "light" : "dark");
+
+if (themeToggle) {
+    themeToggle.addEventListener("click", function () {
+        const isLight = root.getAttribute("data-theme") === "light";
+        const newTheme = isLight ? "dark" : "light";
+        applyTheme(newTheme);
+        localStorage.setItem("theme", newTheme);
+    });
+}
+
 const links = document.querySelectorAll("a");
 
 links.forEach(function (link) {
@@ -26,4 +81,55 @@ links.forEach(function (link) {
             }
         }
     });
+});
+
+// Keep the gallery scrollbar hidden while supporting mouse and touch input.
+document.querySelectorAll(".portfolio-track").forEach(function (track) {
+    let drag = null;
+    let suppressClick = false;
+    track.addEventListener("wheel", function (event) {
+        if (event.ctrlKey || event.shiftKey || Math.abs(event.deltaX) > Math.abs(event.deltaY)) return;
+        const scale = event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? track.clientWidth : 1;
+        const delta = event.deltaY * scale;
+        const limit = track.scrollWidth - track.clientWidth;
+        if ((delta > 0 && track.scrollLeft < limit - 1) || (delta < 0 && track.scrollLeft > 1)) {
+            event.preventDefault();
+            track.scrollLeft += delta;
+        }
+    }, { passive: false });
+    track.addEventListener("pointerdown", function (event) {
+        if (event.pointerType !== "mouse" || event.button !== 0) return;
+        suppressClick = false;
+        drag = { id: event.pointerId, x: event.clientX, left: track.scrollLeft, moved: false };
+    });
+    track.addEventListener("pointermove", function (event) {
+        if (!drag || event.pointerId !== drag.id) return;
+        const distance = event.clientX - drag.x;
+        if (!drag.moved && Math.abs(distance) < 5) return;
+        if (!drag.moved) {
+            drag.moved = true;
+            track.setPointerCapture(event.pointerId);
+            track.classList.add("is-dragging");
+        }
+        track.scrollLeft = drag.left - distance;
+        event.preventDefault();
+    });
+    function endDrag(event) {
+        if (!drag || event.pointerId !== drag.id) return;
+        suppressClick = drag.moved;
+        drag = null;
+        track.classList.remove("is-dragging");
+        if (track.hasPointerCapture(event.pointerId)) track.releasePointerCapture(event.pointerId);
+    }
+    window.addEventListener("pointerup", endDrag);
+    track.addEventListener("pointercancel", endDrag);
+    track.addEventListener("lostpointercapture", endDrag);
+    track.addEventListener("dragstart", function (event) { event.preventDefault(); });
+    track.addEventListener("click", function (event) {
+        if (suppressClick) {
+            event.preventDefault();
+            event.stopImmediatePropagation();
+            suppressClick = false;
+        }
+    }, true);
 });

@@ -1,0 +1,42 @@
+.productivity-tags span { font-size: 20px; }
+.work-design { padding: 50px 2.3% 60px; font-family: "Roboto", Arial, sans-serif; }
+.work-design > h2 { font: 600 clamp(36px, 3.7vw, 71px)/1.15 "Roboto", Arial, sans-serif; margin-bottom: 26px; }
+.work-design h2 span, .work-entry h3 span { color: #aaa; }
+.work-entry { margin-bottom: 48px; }
+.work-entry h3 { font: 600 clamp(23px, 2vw, 38px)/1.2 "Roboto", Arial, sans-serif; margin-bottom: 26px; }
+.work-entry p, .work-entry li { font-size: clamp(18px, 1.65vw, 31px); font-weight: 300; line-height: 1.2; }
+.work-entry ul { padding-left: 24px; }
+.work-image-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.3%; width: 94%; margin: 32px auto; }
+.work-image-placeholder { aspect-ratio: 1.35; border: 2px solid #e800e4; border-radius: 5px; background: #0005; }
+.work-education { margin: 35px 3% 0; }
+.work-education > summary { cursor: pointer; font-size: 20px; margin-bottom: 24px; }
+.design-footer { position: relative; isolation: isolate; overflow: hidden; background: #000; border-top: 1px solid #ddd; color: #fff; padding: 60px 3.8% 0; font-family: "Roboto", Arial, sans-serif; }
+.design-footer::before { content: ""; position: absolute; z-index: -1; width: 350px; height: 350px; bottom: -20px; left: -270px; border-radius: 50%; background: #fcb1f966; filter: blur(65px); pointer-events: none; }
+.design-footer-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 28px; }
+.design-footer-top h2 { font: 600 clamp(35px, 3.7vw, 71px)/1.15 "Roboto", Arial, sans-serif; }
+.design-footer-top h2 span { color: #aaa; }
+.design-footer-copyright { font-size: 14px; font-weight: 300; letter-spacing: 3px; margin-top: 7px; }
+.design-footer-top .design-logo { font-size: clamp(24px, 2.5vw, 48px); background: linear-gradient(#000, #000) padding-box, linear-gradient(#30201e, #666) border-box; }
+.design-footer-columns { display: grid; grid-template-columns: 1.15fr 1.05fr 1.1fr 1fr; gap: 2.2%; margin-top: 32px; }
+.design-footer-columns h3 { font: 300 clamp(28px, 2.5vw, 48px)/1.15 "Roboto", Arial, sans-serif; margin-bottom: 12px; }
+.design-footer-social > p, .design-footer-social > a { display: flex; align-items: center; gap: 10px; font-size: clamp(14px, 1.3vw, 25px); font-weight: 300; margin-bottom: 10px; overflow-wrap: anywhere; }
+.design-footer-menu { display: grid; grid-template-columns: max-content max-content; gap: 20px; font-size: clamp(18px, 1.65vw, 31px); font-weight: 600; }
+.design-footer-contact > a { display: block; font-size: clamp(14px, 1.3vw, 25px); margin-bottom: 12px; overflow-wrap: anywhere; }
+.design-footer-contact > a:last-child { font-weight: 300; text-decoration: underline; text-underline-offset: 3px; }
+.design-footer-hire { font-size: clamp(32px, 4.8vw, 92px); font-weight: 300; white-space: nowrap; line-height: 1; }
+.design-footer-hire span { background: linear-gradient(90deg, #fcb1f9, #fff); background-clip: text; -webkit-background-clip: text; color: transparent; }
+.design-footer-wordmark { margin-top: 65px; padding-left: .16em; text-align: center; font: 700 clamp(70px, 16vw, 305px)/1.1 "Inter", Arial, sans-serif; letter-spacing: .16em; background: linear-gradient(90deg, #fff 0%, #827b7b 40%, #959595 53%, #fff 96%); background-clip: text; -webkit-background-clip: text; color: transparent; filter: drop-shadow(0 7px 4px #fff8); }
+.design-footer a:focus-visible { outline: 2px solid #fcb1f9; outline-offset: 4px; }
+@media (max-width: 1000px) { .design-footer-columns { grid-template-columns: 1fr 1fr; gap: 30px; } .design-footer-hire { font-size: 55px; } }
+@media (max-width: 600px) { .design-footer { padding-top: 35px; } .design-footer-top { flex-direction: column; } .design-footer-columns { grid-template-columns: 1fr; } .design-footer-wordmark { margin-top: 35px; } .work-image-grid { grid-template-columns: 1fr; gap: 22px; } .work-entry { margin-bottom: 30px; } }
+
+.portfolio-additional { margin: 20px 4%; }
+.portfolio-additional > summary { cursor: pointer; font: 400 18px "Roboto", Arial, sans-serif; color: #aaa; padding: 12px 0; }
+.portfolio-additional[open] > section { padding-top: 24px; }
+/* Continue the dark work background into the footer. */
+.design-footer { margin-top: 0; background: linear-gradient(180deg, #0c0c0c 0%, #000 22%); }
+
+.design-footer .design-logo:hover {
+    background: linear-gradient(180deg, #65476e, #5b4263) padding-box,
+        linear-gradient(180deg, #251522, #707070) border-box;
+}

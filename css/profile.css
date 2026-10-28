@@ -1,0 +1,95 @@
+/* One continuous surface from My Portfolio through the profile and skills. */
+.portfolio-profile-background {
+    position: relative;
+    isolation: isolate;
+    color: #fff;
+    background: linear-gradient(180deg, #1d081a 0%, #000 100%);
+    font-family: "Roboto", Arial, sans-serif;
+}
+.portfolio-profile-background .portfolio-design { background: transparent; }
+.profile-design, .technical-design { position: relative; isolation: isolate; padding: 25px 4% 45px; }
+.profile-design::before {
+    content: ""; position: absolute; z-index: -1; inset: 3% 12% -5%;
+    background: radial-gradient(ellipse, #ffffff70, #ffffff00 70%); filter: blur(45px); pointer-events: none;
+}
+.profile-heading { text-align: center; margin-bottom: 32px; }
+.profile-heading h2 { font: 600 clamp(29px, 3.7vw, 71px)/1.15 "Roboto", Arial, sans-serif; }
+.profile-heading h2 span, .technical-design h2 span { color: #aaa; font-weight: 400; }
+.profile-heading > p { max-width: 1100px; margin: 0 auto; font-size: clamp(17px, 1.65vw, 31px); font-weight: 300; line-height: 1.2; }
+.profile-design-grid { display: grid; grid-template-columns: 1fr 1.84fr; gap: 2.3%; align-items: stretch; }
+.profile-contact-card, .profile-summary-card { border: 1px solid #5f5f5f; border-radius: clamp(24px, 2.4vw, 46px); }
+.profile-contact-card { padding: clamp(20px, 1.6vw, 31px); background: linear-gradient(180deg, #151015, #3c383b 64%, #151015); }
+.profile-contact-card > img { display: block; width: 100%; aspect-ratio: 1.13; height: auto; object-fit: cover; object-position: center 35%; border-radius: clamp(18px, 1.5vw, 30px); margin-bottom: 28px; }
+.profile-contact-line { display: flex; align-items: center; gap: 7px; margin: 10px 5px; font-size: clamp(13px, 1.3vw, 25px); font-weight: 300; overflow-wrap: anywhere; }
+.social-mark { flex-shrink: 0; width: 1.65em; height: 1.65em; border-radius: 6px; display: grid; place-items: center; font-weight: 600; }
+.instagram-mark { background: linear-gradient(30deg, #ffca60, #f52a82, #7e3cde); font-size: 1.1em; }
+.facebook-mark { background: #3d5b99; border-radius: 2px; font-family: Arial, sans-serif; font-weight: 700; }
+.mail-mark { background: #fff; color: #db4437; }
+.profile-summary-card { padding: clamp(24px, 2.3vw, 44px); background: linear-gradient(180deg, #000 13%, #433f3f 100%); box-shadow: 0 4px 4px #0005; }
+.profile-summary-card h3 { font: 600 clamp(25px, 2.8vw, 54px)/1.2 "Roboto", Arial, sans-serif; margin: 12px 0 24px; }
+.profile-summary-card > p { font-size: clamp(18px, 1.9vw, 36px); line-height: 1.16; font-weight: 300; }
+.technical-design { padding-top: 25px; overflow: hidden; }
+.technical-design::before, .technical-design::after { content: ""; position: absolute; z-index: -1; border-radius: 50%; pointer-events: none; filter: blur(65px); }
+.technical-design::before { width: 45%; height: 30%; top: 10%; left: -10%; background: #a4a4a466; transform: rotate(25deg); }
+.technical-design::after { width: 40%; height: 35%; top: 35%; right: -15%; background: #ffffff52; }
+.technical-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 4%; align-items: center; }
+.technical-heading h2, .productivity-design h2 { font: 400 clamp(34px, 3.7vw, 71px)/1.15 "Roboto", Arial, sans-serif; }
+.technical-heading > p { font-size: clamp(17px, 1.65vw, 31px); font-weight: 300; margin-top: 24px; line-height: 1.2; }
+.technical-pill { padding: 16px 4%; border: 1px solid #6f6f6f; border-radius: clamp(26px, 2.5vw, 48px); box-shadow: 0 6px 6px #0004; }
+.technical-pill h3 { color: #aaa; font: 400 clamp(23px, 2vw, 38px)/1.1 "Roboto", Arial, sans-serif; }
+.technical-pill p, .technical-ai { font-size: clamp(17px, 1.6vw, 30px); line-height: 1.2; }
+.technical-pill p { margin-top: 3px; }
+.technical-purple { background: linear-gradient(180deg, #402049, #19091c); }
+.technical-gray, .technical-ai { background: linear-gradient(180deg, #000, #533e5b); }
+.technical-ai { padding-block: 35px; }
+.productivity-design { margin-top: 34px; text-align: center; }
+.productivity-tags { display: flex; justify-content: center; flex-wrap: wrap; gap: 24px 3.3%; margin: 28px auto 0; }
+.productivity-tags span { flex: 0 1 17%; min-width: 160px; padding: 14px 18px; border: 1px solid #6f6f6fc9; border-radius: 50px; background: #0008; font-size: clamp(17px, 1.6vw, 30px); white-space: nowrap; }
+@media (max-width: 800px) {
+ .profile-design-grid { grid-template-columns: 1fr; gap: 22px; }
+ .profile-contact-card { width: min(100%, 430px); margin-inline: auto; }
+ .profile-summary-card > p { line-height: 1.4; }
+ .technical-grid { gap: 18px; }
+ .technical-heading { grid-column: 1 / -1; }
+ .technical-ai { grid-column: 1 / -1; padding-block: 22px; }
+ .technical-pill { padding: 20px; }
+ .technical-pill h3 { font-size: 23px; }
+ .productivity-tags span { flex-basis: 40%; min-width: 0; white-space: normal; }
+}
+@media (max-width: 500px) {
+ .technical-grid { grid-template-columns: 1fr; }
+ .profile-heading h2 span { display: block; }
+ .profile-heading > p { margin-top: 12px; }
+ .profile-summary-card h3 { font-size: 26px; }
+ .profile-contact-line { font-size: 16px; }
+}
+
+
+
+/* The Figma gradient begins at the profile and extends through experience. */
+.profile-experience-background {
+    position: relative;
+    isolation: isolate;
+    color: #fff;
+    font-family: "Roboto", Arial, sans-serif;
+    background: linear-gradient(180deg, #000 0%, #000 57%, #40133e 75%, #272727 91%, #0c0c0c 100%);
+}
+.profile-experience-background .experience { padding-top: 50px; }
+.technical-design::before {
+    background: #a4a4a466;
+    top: 8%; height: 30%; width: 45%;
+}
+.technical-design::after {
+    background: #ffffff52;
+    top: 30%; height: 35%; width: 40%;
+}
+
+
+
+.technical-ai { align-self: end; margin-bottom: 8px; }
+.technical-qa { container-type: inline-size; }
+.technical-qa > p { font-size: 19px; white-space: normal; overflow-wrap: anywhere; }
+
+.portfolio-profile-background {
+    background: linear-gradient(180deg, #1d081a 0%, #000 100%);
+}

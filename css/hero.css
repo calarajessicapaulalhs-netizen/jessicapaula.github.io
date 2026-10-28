@@ -1,0 +1,134 @@
+/* Paula's landing-page design; lower portfolio sections retain their styles. */
+.landing-intro {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background: #11041d;
+    color: #fff;
+    font-family: "Roboto", Arial, sans-serif;
+    padding: clamp(32px, 4.9vw, 94px) 0 clamp(48px, 3.3vw, 64px);
+}
+.design-navbar, .design-hero {
+    width: 90%;
+    max-width: 1740px;
+    margin-inline: auto;
+    position: relative;
+    z-index: 1;
+}
+.design-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    margin-bottom: clamp(32px, 2.75vw, 53px);
+}
+.design-logo {
+    flex-shrink: 0;
+    padding: .34em .45em;
+    border: 3px solid transparent;
+    border-radius: .65em;
+    background: linear-gradient(#11041d, #11041d) padding-box,
+        linear-gradient(180deg, #30251d, #666) border-box;
+    font-size: clamp(24px, 2.5vw, 48px);
+    font-weight: 400;
+    white-space: nowrap;
+}
+.design-nav { display: flex; align-items: center; gap: clamp(24px, 3.2vw, 62px); }
+.design-nav a { font-size: clamp(17px, 1.9vw, 36px); font-weight: 300; white-space: nowrap; }
+.design-nav a:hover { color: #fcb1f9; }
+.design-hero { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); gap: 5.5%; align-items: start; }
+.design-hero h1, .design-hero h2 { font-family: "Roboto", Arial, sans-serif; font-weight: 600; letter-spacing: 0; }
+.design-hero h1 {
+    font-size: clamp(32px, 4.8vw, 92px);
+    line-height: 1.18;
+    white-space: nowrap;
+    margin: .1em 0 .12em;
+    background: linear-gradient(100deg, #fff 10%, #aaa 42%, #fff 75%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.design-hero h2 { font-size: clamp(28px, 3.7vw, 71px); line-height: 1.18; color: #dedcde; }
+.design-hero-copy p { max-width: 95%; margin-top: .4em; font-size: clamp(17px, 1.9vw, 36px); font-weight: 300; line-height: 1.16; }
+.design-hero-actions { display: flex; gap: clamp(18px, 1.9vw, 36px); margin-top: clamp(24px, 2.1vw, 40px); }
+.design-hero-actions a { display: inline-flex; align-items: center; justify-content: center; min-height: 2.25em; padding: .4em .9em; border-radius: 999px; font-size: clamp(23px, 2.5vw, 48px); font-weight: 400; transition: transform .2s, box-shadow .2s; white-space: nowrap; }
+.design-project-button { border: 1px solid #b8a4c4; background: linear-gradient(120deg, #261632, #503164); }
+.design-resume-button { color: #080509; background: linear-gradient(180deg, #b59bbd 65%, #b59bbd 70%, #735280); border: 1px solid #bda9c5; }
+.design-hero-actions a:hover { transform: translateY(-3px); box-shadow: 0 8px 28px #cd5dc933; }
+.design-portrait { position: relative; aspect-ratio: 1; }
+.design-portrait img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 42%; border: 2px solid #fff; border-radius: 8.5%; box-shadow: 0 5px 5px #0009; }
+.landing-glow { position: absolute; z-index: -1; border-radius: 50%; pointer-events: none; filter: blur(55px); }
+.landing-glow-top { width: 35%; height: 35%; top: -14%; right: -5%; background: #8644a766; }
+.landing-glow-left { width: 25%; aspect-ratio: 1; left: -20%; bottom: -8%; background: #fcb1f966; }
+.landing-glow-portrait { width: 55%; height: 44%; bottom: -2%; left: -24%; background: #cd5dc93d; filter: blur(45px); }
+.design-navbar a:focus-visible, .design-hero a:focus-visible { outline: 3px solid #fcb1f9; outline-offset: 6px; }
+@media (min-width: 1600px) { .design-navbar, .design-hero { width: 92%; } }
+@media (max-width: 1000px) {
+    .design-navbar { flex-direction: column; align-items: flex-start; gap: 24px; }
+    .design-nav { width: 100%; justify-content: space-between; gap: 14px; }
+    .design-hero { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 5%; }
+    .design-hero h1 { font-size: 4.5vw; }
+    .design-hero h2 { font-size: 3.5vw; }
+    .design-hero-copy p { max-width: 100%; }
+    .design-hero-actions { gap: 12px; }
+    .design-hero-actions a { font-size: 20px; }
+}
+@media (max-width: 640px) {
+    .design-navbar { margin-bottom: 32px; }
+    .design-nav { flex-wrap: wrap; justify-content: flex-start; gap: 16px 23px; }
+    .design-nav a { font-size: 16px; }
+    .design-hero { grid-template-columns: 1fr; gap: 36px; }
+    .design-hero h1 { font-size: clamp(26px, 6.5vw, 42px); }
+    .design-hero h2 { font-size: clamp(25px, 6vw, 38px); }
+    .design-hero-copy p { margin-top: 16px; font-size: 18px; line-height: 1.4; }
+    .design-hero-actions { flex-wrap: wrap; }
+    .design-hero-actions a { font-size: 22px; }
+    .design-portrait { width: min(100%, 420px); margin-inline: auto; }
+    .landing-glow-top { width: 80%; height: 24%; }
+    .landing-glow-left { width: 65%; left: -45%; bottom: 35%; }
+}
+
+/* Hover variants from Paula's button reference. */
+.design-logo {
+    transition: background .2s ease, box-shadow .2s ease;
+}
+.design-logo:hover {
+    background: linear-gradient(180deg, #65476e, #5b4263) padding-box,
+        linear-gradient(180deg, #251522, #707070) border-box;
+}
+.design-hero-actions .design-project-button:hover {
+    background: linear-gradient(120deg, #292929, #626262);
+    border-color: #777;
+    color: #fff;
+    transform: none;
+    box-shadow: 0 6px 5px #0006;
+}
+.design-hero-actions .design-resume-button:hover {
+    background: linear-gradient(120deg, #927b99, #4c464f);
+    border-color: #9c88a3;
+    color: #fff;
+    transform: none;
+    box-shadow: 0 6px 5px #0005;
+}
+
+/* Reserve the longest greeting's width while the words slide upward. */
+.design-hero h1 { background: none; color: #fff; }
+.hero-greeting { display: flex; align-items: baseline; gap: .23em; }
+.hero-word-window { display: inline-block; height: 1.18em; overflow: hidden; vertical-align: bottom; }
+.hero-word-reel { display: flex; flex-direction: column; animation: greeting-roll 4s cubic-bezier(.65, 0, .35, 1) infinite; }
+.hero-word-reel > span { display: block; flex: 0 0 1.18em; height: 1.18em; line-height: 1.18; background: linear-gradient(100deg, #fff 0%, #aaa 40%, #fff 85%); background-clip: text; -webkit-background-clip: text; color: transparent; }
+@keyframes greeting-roll {
+    0%, 38% { transform: translateY(0); }
+    50%, 88% { transform: translateY(-1.18em); }
+    100% { transform: translateY(-2.36em); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .hero-word-reel { animation: none; }
+}
+
+.hero-fixed-greeting { color: #a8a8a8; }
+.hero-word-reel > span { background: none; color: #fff; }
+
+.hero-word-window { font-size: 53px; }
+
+.hero-fixed-greeting { font-size: 53px; }
