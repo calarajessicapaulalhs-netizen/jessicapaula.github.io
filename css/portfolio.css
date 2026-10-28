@@ -197,3 +197,6 @@
 }
 
 .portfolio-image { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center; user-select: none; }
+
+/* Vector arrows keep their shape instead of using the phone's emoji font. */
+.featured-arrow svg { display: block; width: 72%; height: 72%; }

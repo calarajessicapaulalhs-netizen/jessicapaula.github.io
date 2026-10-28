@@ -32,3 +32,8 @@
     .productivity-tags { gap: 12px; }
     .productivity-tags span { flex-basis: calc(50% - 6px); padding-inline: 8px; font-size: 18px; }
 }
+
+@media (min-width: 1100px) {
+    .hero-word-window, .hero-fixed-greeting { font-size: 53px; }
+    .hero-greeting { flex-wrap: wrap; row-gap: 0; }
+}
