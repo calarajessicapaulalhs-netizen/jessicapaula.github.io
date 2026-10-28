@@ -3,9 +3,14 @@
 // avoid the generic "everything staggers in" effect, and respects the
 // visitor's reduced-motion preference.
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-const revealEls = document.querySelectorAll(".reveal");
+const revealEls = document.querySelectorAll(
+    ".reveal, .featured-heading, .featured-frame, .portfolio-design-heading, " +
+    ".portfolio-row, .profile-heading, .profile-design-grid, .technical-heading, " +
+    ".technical-pill, .productivity-design, .work-design > h2, .work-entry, .work-image-grid"
+);
 
 if (!prefersReducedMotion && "IntersectionObserver" in window) {
+    revealEls.forEach(function (el) { el.classList.add("motion-reveal"); });
     const revealObserver = new IntersectionObserver(
         function (entries) {
             entries.forEach(function (entry) {
@@ -15,7 +20,7 @@ if (!prefersReducedMotion && "IntersectionObserver" in window) {
                 }
             });
         },
-        { threshold: 0.15, rootMargin: "0px 0px -60px 0px" }
+        { threshold: 0.08, rootMargin: "0px 0px -24px 0px" }
     );
 
     revealEls.forEach(function (el) {

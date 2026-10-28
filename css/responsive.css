@@ -1,0 +1,34 @@
+/* Final responsive overrides shared by Home and Blog. */
+.design-hero-copy, .design-portrait, .design-footer-columns > *, .technical-grid > * { min-width: 0; }
+.hero-word-window, .hero-fixed-greeting { font-size: clamp(19px, 2.75vw, 53px); }
+.hero-word-window { flex-shrink: 0; }
+.hero-greeting { gap: .16em; }
+.design-nav { flex-wrap: wrap; }
+.featured-heading { grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr); }
+.featured-heading h2 { font-size: clamp(28px, 3.4vw, 65px); }
+.design-footer-columns a, .design-footer-social p { overflow-wrap: anywhere; }
+.design-footer-wordmark { font-size: clamp(45px, 15vw, 285px); }
+.technical-qa > p { overflow-wrap: normal; word-break: normal; }
+@media (max-width: 1000px) {
+    .featured-heading { grid-template-columns: minmax(0, 1fr); }
+    .design-footer-top { flex-wrap: wrap; }
+}
+@media (max-width: 640px) {
+    .hero-word-window, .hero-fixed-greeting { font-size: clamp(18px, 4.6vw, 29px); }
+    .design-hero h1 { margin-bottom: 16px; }
+    .design-hero-actions { gap: 12px; }
+    .design-hero-actions a { font-size: 19px; padding-inline: 20px; }
+    .featured-heading h2 { white-space: normal; }
+    .portfolio-caption { font-size: 18px; }
+    .profile-contact-line { margin-inline: 0; }
+    .work-entry { margin-inline: 0; }
+    .work-entry h3 { overflow-wrap: anywhere; }
+    .work-cert-list { margin-inline: 0; }
+    .design-footer-menu { gap: 16px 24px; }
+    .design-footer-top h2 { font-size: clamp(23px, 6.3vw, 35px); }
+}
+@media (max-width: 360px) {
+    .design-hero-actions { flex-direction: column; align-items: stretch; }
+    .productivity-tags { gap: 12px; }
+    .productivity-tags span { flex-basis: calc(50% - 6px); padding-inline: 8px; font-size: 18px; }
+}

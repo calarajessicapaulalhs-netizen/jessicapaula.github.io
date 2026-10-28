@@ -72,7 +72,7 @@
     isolation: isolate;
     color: #fff;
     font-family: "Roboto", Arial, sans-serif;
-    background: linear-gradient(180deg, #000 0%, #000 57%, #40133e 75%, #272727 91%, #0c0c0c 100%);
+    background: linear-gradient(180deg, #000 0%, #000 57%, #11041d 75%, #17131b 91%, #0c0c0c 100%);
 }
 .profile-experience-background .experience { padding-top: 50px; }
 .technical-design::before {

@@ -132,3 +132,8 @@
 .hero-word-window { font-size: 53px; }
 
 .hero-fixed-greeting { font-size: 53px; }
+
+/* Leave room for the Blog navigation link. */
+.design-nav { gap: clamp(18px, 2.1vw, 40px); }
+.design-nav a { font-size: clamp(17px, 1.65vw, 32px); }
+@media (max-width: 640px) { .design-nav { gap: 16px 23px; } .design-nav a { font-size: 16px; } }
