@@ -115,3 +115,7 @@
 .mail-mark { background: #fff; padding: 3px; }
 
 .linkedin-mark { background: #0a66c2; color: #fff; border-radius: 3px; padding: 5px; }
+
+.design-footer-hire span { background: none; color: #d46af0; }
+/* Continue the final reference gradient color into the footer. */
+.design-footer { background: linear-gradient(180deg, #11041d 0%, #000 20%); }
