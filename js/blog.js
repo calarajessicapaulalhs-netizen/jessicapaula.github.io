@@ -16,3 +16,17 @@
         observer.observe(element);
     });
 })();
+
+// Selecting a rear card brings it forward; the front card cycles to the next photo.
+document.querySelectorAll('.photo-stack').forEach(stack => {
+    let order = Array.from(stack.querySelectorAll('.photo-stack-card'));
+    order.forEach(card => card.addEventListener('click', () => {
+        const selected = order.indexOf(card);
+        const index = selected === 0 ? 1 : selected;
+        order = order.slice(index).concat(order.slice(0, index));
+        order.forEach((item, position) => {
+            item.dataset.position = String(position);
+            item.setAttribute('aria-pressed', String(position === 0));
+        });
+    }));
+});
