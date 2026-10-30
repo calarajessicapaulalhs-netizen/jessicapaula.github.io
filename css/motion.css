@@ -42,3 +42,8 @@
     .technical-pill { transition: none; }
     .technical-pill:hover { transform: none; }
 }
+
+.featured-frame.motion-reveal {
+    transition: opacity .65s ease, translate .65s cubic-bezier(.2,.7,.2,1), box-shadow .3s ease, border-color .3s ease;
+}
+@media (prefers-reduced-motion: reduce) { .featured-frame.motion-reveal { transition: none; } }

@@ -140,3 +140,14 @@
 
 .design-hero h2 { color: #fff; }
 .design-hero h2 .hero-intro-muted { color: #a8a8a8; }
+
+.portfolio-location {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+    font: 300 clamp(20px, 1.9vw, 36px)/1.2 "Roboto", Arial, sans-serif;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+.portfolio-location svg { display: block; flex-shrink: 0; }

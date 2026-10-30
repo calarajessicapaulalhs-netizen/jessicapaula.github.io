@@ -1,9 +1,7 @@
-// Scroll-reveal: each major section fades/slides in once as it enters
-// the viewport. Deliberately one reveal per section (not per card) to
-// avoid the generic "everything staggers in" effect, and respects the
-// visitor's reduced-motion preference.
+// Replay section reveals when visitors return while scrolling in either direction.
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const revealEls = document.querySelectorAll(
+    ".design-navbar, .design-hero-copy > h1, .design-hero-copy > h2, .design-hero-copy > p, .design-hero-actions, .design-portrait, " +
     ".reveal, .featured-heading, .featured-frame, .portfolio-design-heading, " +
     ".portfolio-row, .profile-heading, .profile-design-grid, .technical-heading, " +
     ".technical-pill, .productivity-design, .work-design > h2, .work-entry, .work-image-grid"
@@ -16,11 +14,12 @@ if (!prefersReducedMotion && "IntersectionObserver" in window) {
             entries.forEach(function (entry) {
                 if (entry.isIntersecting) {
                     entry.target.classList.add("is-visible");
-                    revealObserver.unobserve(entry.target);
+                } else if (entry.boundingClientRect.bottom <= 0 || entry.boundingClientRect.top >= window.innerHeight) {
+                    entry.target.classList.remove("is-visible");
                 }
             });
         },
-        { threshold: 0.08, rootMargin: "0px 0px -24px 0px" }
+        { threshold: [0, 0.08], rootMargin: "0px" }
     );
 
     revealEls.forEach(function (el) {

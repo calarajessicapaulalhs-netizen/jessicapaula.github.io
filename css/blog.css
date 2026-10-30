@@ -1,0 +1,456 @@
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+body { margin: 0; color: #f5f5f2; background: #090909; font-family: 'Roboto', Arial, sans-serif; font-weight: 300; }
+body::after { content: ''; position: fixed; inset: 0; z-index: 10; background: url('../assets/blog-grain.svg'); opacity: .22; pointer-events: none; }
+a { color: inherit; text-decoration: none; }
+p,h1,h2 { margin: 0; }
+a:focus-visible, summary:focus-visible { outline: 3px solid #af96ff; outline-offset: 5px; }
+.blog-nav { display: flex; justify-content: space-between; align-items: center; gap: 32px; padding: 50px 4.5% 38px; background: radial-gradient(ellipse at top right, #343136, transparent 55%); }
+.blog-location { display: flex; align-items: center; gap: 12px; font-size: clamp(18px, 1.9vw, 32px); white-space: nowrap; }
+.blog-nav nav { display: flex; flex-wrap: wrap; gap: clamp(18px, 2.7vw, 48px); }
+.blog-nav nav a { font-size: clamp(16px, 1.7vw, 30px); }
+.blog-nav nav a:hover, .blog-nav nav a[aria-current] { color: #bda9ff; }
+.blog-intro { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 8%; padding: 20px 9% 0 3.8%; position: relative; }
+.intro-copy h1 { display: flex; align-items: center; gap: 14px; font-size: clamp(40px, 4.8vw, 92px); letter-spacing: .09em; font-weight: 700; white-space: nowrap; }
+.intro-copy h1 > span { font-size: .3em; letter-spacing: .06em; font-weight: 400; }
+.intro-copy > p { font-size: clamp(18px, 1.7vw, 30px); line-height: 1.2; margin-top: 20px; }
+.intro-copy .intro-lead { font-weight: 400; letter-spacing: .08em; }
+.photo-placeholder { background: linear-gradient(135deg, #29262e, #111015); display: grid; place-items: center; min-width: 0; overflow: hidden; color: #a69fae; }
+.photo-placeholder > span { font-size: 13px; letter-spacing: .08em; text-align: center; padding: 12px; }
+.intro-portrait { aspect-ratio: 1.03; align-self: start; border: 2px solid #fff; border-radius: 28px; box-shadow: 0 4px 5px #0009; margin-bottom: -24px; z-index: 2; }
+.contents-folder { margin-top: 65px; width: 85%; position: relative; background: #a895fb; border: 3px solid #262626; border-radius: 24px 24px 0 0; color: #111; }
+.contents-folder summary { cursor: pointer; list-style: none; padding: 12px 20px; font-size: clamp(26px, 2.8vw, 48px); font-weight: 900; display: flex; justify-content: space-between; align-items: center; }
+.contents-folder summary::-webkit-details-marker { display: none; }
+.contents-folder summary > span { font-weight: 400; }
+.contents-folder[open] summary > span { rotate: 45deg; }
+.contents-folder nav { margin: 8px 18px 20px; border: 3px solid #262626; border-radius: 20px; overflow: hidden; }
+.contents-folder nav a { display: block; padding: 14px 18px; font-size: clamp(18px, 1.7vw, 30px); font-weight: 900; border-bottom: 3px solid #262626; background: #f0eee7; }
+.contents-folder nav a:last-child { border-bottom: 0; }
+.contents-folder nav a:hover { color: #fff; background: #262626; }
+.folder-waves { height: 85px; background: repeating-radial-gradient(ellipse at 40% 260%, #222 0 16px, #a895fb 17px 32px); }
+/* The closed folder retains its striped cover below the clickable tab. */
+.contents-folder:not([open])::after { content: ''; display: block; height: 80px; background: repeating-radial-gradient(ellipse at 40% 260%, #222 0 16px, #a895fb 17px 32px); }
+.college-section { color: #111; background: #efeeeb; }
+.college-banner, .college-outro { display: grid; grid-template-columns: 1.25fr 1fr; align-items: center; gap: 30px; padding: 20px 3.5%; }
+.college-banner h2, .college-repeat { font-size: clamp(34px, 4.8vw, 92px); font-weight: 900; line-height: 1.05; color: #201338; white-space: nowrap; }
+.college-banner h2 span, .college-repeat span { color: transparent; -webkit-text-stroke: 1px #111; }
+.college-banner > a { text-align: center; font-size: clamp(15px, 1.6vw, 28px); letter-spacing: .07em; font-weight: 400; }
+.college-collage { display: grid; grid-template-columns: 1.2fr 1fr .9fr; }
+.collage-column { display: flex; flex-direction: column; }
+.college-photo { height: clamp(130px, 14vw, 270px); border: 1px solid #ffffff0a; }
+.collage-column:nth-child(2) .college-photo:nth-child(2) { height: clamp(110px, 10vw, 190px); }
+.collage-column:nth-child(2) .college-photo:nth-child(3) { flex: 1; }
+.college-outro { grid-template-columns: 1fr 1fr; padding-block: 26px; }
+.college-outro > p:first-child { font-size: clamp(17px, 1.6vw, 29px); line-height: 1.2; }
+.college-repeat { font-size: clamp(30px, 4.4vw, 84px); }
+.beyond-section { background: #101010; }
+.beyond-section > h2 { font-size: clamp(34px, 4.8vw, 92px); font-weight: 900; padding: 18px 2.4% 28px; line-height: 1.1; }
+.beyond-section > h2 span { color: transparent; -webkit-text-stroke: 1px #fff; }
+.music-band { display: grid; grid-template-columns: 1fr 1.2fr; gap: 2.5%; background: #d9d9d9; color: #111; padding: 22px 1.3%; align-items: center; }
+.music-band > p { font-size: clamp(21px, 1.9vw, 36px); line-height: 1.2; padding: 0 20px; }
+.music-card { display: flex; gap: 20px; padding: 12px 20px; align-items: center; border-radius: 14px; background: #252223; height: clamp(105px, 10vw, 190px); overflow: hidden; }
+.album-placeholder { height: 100%; aspect-ratio: 1; flex-shrink: 0; border-radius: 10px; }
+.sound-wave { display: flex; gap: 9px; align-items: center; height: 100%; flex: 1; }
+.sound-wave i { display: block; height: var(--bar-height); background: #22e500; width: 12px; min-width: 6px; border-radius: 20px; }
+.hobbies-story { display: grid; grid-template-columns: 1.55fr 1fr; gap: 25px; padding: 22px 2.4% 40px; align-items: start; }
+.hobbies-story > p { font-size: clamp(20px, 1.9vw, 36px); line-height: 1.2; }
+.hobbies-portrait { aspect-ratio: 2.8; border: 1px solid #aaa; border-radius: 14px; margin-top: -65px; }
+.beauty-story { display: grid; grid-template-columns: 1fr 2.2fr; gap: 30px; padding: 20px 2%; color: #111; background: #f4f3f0; align-items: start; }
+.beauty-story > p { font-size: clamp(20px, 1.9vw, 36px); line-height: 1.2; }
+.nails-photo { aspect-ratio: 1.8; border: 1px solid #aaa; border-radius: 14px; margin-top: -40px; }
+.hobby-gallery { display: grid; grid-template-columns: 1fr 1.1fr 1fr; gap: 24px; padding: 0 2%; background: #f4f3f0; }
+.hobby-gallery > div { aspect-ratio: 1.8; border: 1px solid #aaa; border-radius: 14px; }
+.hobby-gallery > div:not(:first-child) > span { font-size: clamp(25px, 2.8vw, 50px); color: transparent; -webkit-text-stroke: 1px #ddd; }
+.blog-closing { padding: 26px 3% 40px; background: radial-gradient(ellipse at 30% 0, #403b43, #101010 80%); }
+.blog-closing > p { font-size: clamp(19px, 1.6vw, 30px); line-height: 1.25; }
+.blog-closing h2 { font-size: clamp(29px, 3vw, 56px); text-align: center; font-weight: 900; line-height: 1.15; margin-top: 20px; }
+.blog-closing > a { display: block; width: fit-content; padding: 12px 26px; border: 1px solid #a895fb; border-radius: 50px; margin: 26px auto 0; font-size: 20px; }
+.blog-closing > a:hover { background: #a895fb; color: #111; }
+.blog-footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; padding: 24px 3%; font-size: 15px; border-top: 1px solid #ffffff30; }
+@media (max-width: 1000px) {
+ .blog-nav { flex-wrap: wrap; padding-top: 30px; }
+ .blog-intro { gap: 4%; padding-right: 4%; }
+ .intro-copy h1 { flex-wrap: wrap; font-size: 45px; }
+ .contents-folder { width: 100%; margin-top: 35px; }
+ .college-banner, .college-outro { grid-template-columns: 1fr; gap: 18px; }
+ .college-repeat { text-align: right; }
+ .hobbies-portrait { margin-top: 0; }
+ .sound-wave { gap: 6px; }
+}
+@media (max-width: 640px) {
+ .blog-nav nav { gap: 16px 22px; }
+ .blog-intro { grid-template-columns: 1fr; padding: 12px 5% 28px; }
+ .intro-copy h1 { font-size: clamp(32px, 10vw, 54px); }
+ .intro-copy h1 > span { font-size: 15px; }
+ .intro-portrait { width: min(100%, 380px); margin: 26px auto 0; }
+ .college-banner h2, .college-repeat { white-space: normal; }
+ .college-banner { padding-top: 28px; }
+ .college-collage { grid-template-columns: 1fr; }
+ .collage-column { display: grid; grid-template-columns: 1fr 1fr; }
+ .college-photo, .collage-column:nth-child(2) .college-photo:nth-child(2) { height: 150px; }
+ .collage-column > div:last-child { grid-column: 1 / -1; }
+ .music-band, .hobbies-story, .beauty-story { grid-template-columns: 1fr; gap: 22px; padding: 24px 5%; }
+ .music-band > p { padding: 0; }
+ .music-card { height: 115px; }
+ .sound-wave { gap: 5px; }
+ .sound-wave i { min-width: 3px; }
+ .nails-photo { margin-top: 0; }
+ .hobby-gallery { grid-template-columns: 1fr; padding: 0 5% 24px; gap: 16px; }
+ .hobbies-portrait { width: 100%; }
+ .blog-closing { padding-inline: 5%; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* A shaped folder cover, rather than a rectangular accordion button. */
+.contents-folder {
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    width: 92%;
+}
+.contents-folder summary {
+    display: block;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 900 / 240;
+    padding: 0;
+    background: url('../assets/blog-contents-folder.svg') center / 100% 100% no-repeat;
+}
+.contents-folder summary .folder-title {
+    position: absolute;
+    top: 6%;
+    left: 3%;
+    width: 43%;
+    height: 30%;
+    display: grid;
+    align-items: center;
+    font-size: clamp(18px, 2.9vw, 52px);
+    font-weight: 900;
+    letter-spacing: -.045em;
+    color: #000;
+    rotate: none;
+}
+.contents-folder:not([open])::after { display: none; }
+.contents-folder[open] { background: #a18afa; border-radius: 0 0 22px 22px; padding-bottom: 1px; }
+.contents-folder[open] summary .folder-title { rotate: none; }
+.contents-folder nav { background: #efeee8; }
+/* Grain belongs to the surfaces, so photos remain clear. */
+body::after { display: none; }
+.blog-nav, .blog-intro, .college-banner, .college-outro,
+.beyond-section > h2, .music-band, .hobbies-story, .beauty-story,
+.hobby-gallery, .blog-closing, .blog-footer {
+    position: relative;
+    isolation: isolate;
+}
+.blog-nav::before, .blog-intro::before, .college-banner::before, .college-outro::before,
+.beyond-section > h2::before, .music-band::before, .hobbies-story::before,
+.beauty-story::before, .hobby-gallery::before, .blog-closing::before, .blog-footer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: url('../assets/blog-grain.svg') repeat;
+    opacity: .68;
+    pointer-events: none;
+}
+@media (max-width: 1000px) { .contents-folder { width: 100%; } .contents-folder summary .folder-title { font-size: clamp(18px, 3.2vw, 32px); } }
+@media (max-width: 640px) { .contents-folder summary .folder-title { font-size: clamp(20px, 6vw, 38px); } }
+
+/* Layer the folder behind the white band and the portrait in front of it. */
+body {
+    background:
+        radial-gradient(ellipse 350px 230px at 0 0, #70667470, transparent 100%),
+        radial-gradient(ellipse 460px 280px at 95% 0, #706b7670, transparent 100%),
+        #090909;
+}
+.blog-nav { background: transparent; }
+.blog-intro {
+    min-height: clamp(440px, 30vw, 600px);
+    padding-bottom: 130px;
+    isolation: auto;
+}
+.intro-portrait {
+    margin-bottom: 0;
+    position: relative;
+    z-index: 4;
+    align-self: start;
+}
+.contents-folder {
+    position: absolute;
+    left: 4%;
+    bottom: -34px;
+    width: 41%;
+    margin: 0;
+    z-index: 2;
+}
+.contents-folder[open] {
+    border: 3px solid #242424;
+    background: #a18afa url('../assets/blog-grain.svg');
+    border-radius: 25px 25px 0 0;
+    box-shadow: 0 15px 35px #0006;
+}
+.contents-folder[open] summary {
+    aspect-ratio: auto;
+    height: clamp(65px, 5vw, 100px);
+    background: none;
+}
+.contents-folder[open] summary .folder-title {
+    top: 12px;
+    left: 4%;
+    height: auto;
+    width: auto;
+}
+.contents-folder[open] nav {
+    margin: 0 4%;
+    padding-bottom: 55px;
+    background: #f0eee7 url('../assets/blog-grain.svg');
+    border-radius: 20px 20px 0 0;
+}
+.contents-folder[open] nav a { background: transparent; }
+.contents-folder[open] nav a:hover { background: #242424; }
+.contents-folder[open]::after {
+    content: '';
+    display: block;
+    height: clamp(90px, 9vw, 165px);
+    position: relative;
+    margin-top: -48px;
+    background: url('../assets/blog-contents-folder.svg') center 65% / 100% auto no-repeat;
+    pointer-events: none;
+}
+.college-section { position: relative; z-index: 3; }
+.college-banner { min-height: 115px; position: relative; z-index: 3; }
+/* Pull the picture into the next section without changing the text flow. */
+@media (min-width: 1001px) {
+    .blog-intro { min-height: 32vw; }
+    .intro-portrait { margin-bottom: -170px; }
+}
+@media (min-width: 641px) and (max-width: 1000px) {
+    .contents-folder { width: 48%; }
+    .blog-intro { min-height: 460px; }
+    .intro-portrait { margin-bottom: -155px; }
+    .college-banner { grid-template-columns: 1fr 1fr; }
+    .college-banner h2 { font-size: 4.5vw; white-space: normal; }
+}
+@media (max-width: 640px) {
+    .blog-intro { padding-bottom: 0; min-height: 0; display: flex; flex-direction: column; }
+    .intro-copy { padding-bottom: 130px; }
+    .contents-folder { width: 88%; left: 6%; bottom: auto; position: relative; margin: 30px 0 -170px; }
+    .contents-folder[open] { margin-bottom: -170px; }
+    .intro-portrait { width: min(75%, 340px); margin: 20px 0 -24px auto; z-index: 4; }
+    .college-banner { padding-top: 40px; }
+    .contents-folder[open] summary { height: 62px; }
+}
+
+/* Keep the portrait above the white band, with its lower edge crossing it. */
+@media (min-width: 641px) {
+    .blog-intro > .intro-portrait {
+        position: absolute;
+        top: 20px;
+        bottom: -28px;
+        right: 9%;
+        width: 32%;
+        height: auto;
+        aspect-ratio: auto;
+        margin: 0;
+        z-index: 5;
+    }
+}
+@media (min-width: 641px) and (max-width: 1000px) {
+    .blog-intro > .intro-portrait { right: 4%; width: 35%; }
+}
+/* Outline only: explicit text fill also covers mobile WebKit. */
+.college-banner h2 span, .college-repeat span {
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #111;
+    paint-order: stroke fill;
+}
+.beyond-section > h2 span {
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #f5f5f2;
+}
+
+/* Give the absolute portrait an explicit height so it cannot collapse. */
+@media (min-width: 641px) {
+    .blog-intro > .intro-portrait {
+        top: 20px;
+        bottom: auto;
+        width: 32%;
+        height: calc(100% + 8px);
+        min-height: 300px;
+        align-self: stretch;
+    }
+}
+@media (min-width: 641px) and (max-width: 1000px) {
+    .blog-intro > .intro-portrait { width: 35%; }
+}
+
+/* Shared Portfolio footer social-icon foundations. */
+.design-footer .social-mark { flex-shrink: 0; width: 1.65em; height: 1.65em; border-radius: 6px; display: grid; place-items: center; font-weight: 600; }
+.design-footer .facebook-mark { background: #3d5b99; border-radius: 2px; font-family: Arial, sans-serif; font-weight: 700; }
+.design-footer { font-weight: 400; }
+
+/* Fit supplied photos to the existing editorial frames. */
+.photo-placeholder { position: relative; }
+.photo-placeholder > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.intro-portrait > img { object-position: center 45%; }
+.hobbies-portrait > img { object-position: center 35%; filter: grayscale(1); }
+.college-banner { grid-template-columns: 1fr; }
+.college-collage { grid-template-columns: 1.2fr 1fr .9fr; }
+.collage-column { height: 41vw; }
+.collage-column .college-photo { flex: 1; height: auto; min-height: 0; }
+.collage-column:nth-child(2) .college-photo:nth-child(2) { flex: .72; height: auto; }
+.collage-column:nth-child(2) .college-photo:nth-child(3) { flex: 1.2; }
+.hobby-gallery { grid-template-columns: .9fr 1fr 1fr; }
+.hobby-gallery > div { aspect-ratio: 1.8; min-height: 0; }
+.hobby-gallery .hobby-photo-label { position: absolute; left: 5%; bottom: 3%; padding: 0; z-index: 1; font-size: clamp(28px, 4.8vw, 80px); -webkit-text-fill-color: transparent; -webkit-text-stroke: 1px #fff; }
+@media (max-width: 640px) {
+ .college-collage { grid-template-columns: 1fr; }
+ .collage-column { height: auto; }
+ .collage-column .college-photo, .collage-column:nth-child(2) .college-photo:nth-child(2) { height: 180px; }
+ .hobby-gallery { grid-template-columns: 1fr; }
+ .hobby-gallery > div { aspect-ratio: 1.8; }
+}
+
+/* Keep the group faces in the shallow college collage frame. */
+.college-photo-5 > img { object-position: center 25%; }
+.creative-layout {
+    display: grid;
+    grid-template-columns: .9fr 1fr 1fr;
+    grid-template-areas: "nails story story" "everyday selfie running";
+    gap: 22px;
+    padding: 20px 2% 16px;
+    background: #f4f3f0 url('../assets/blog-grain.svg');
+    color: #111;
+    align-items: start;
+}
+.creative-layout .nails-photo { grid-area: nails; aspect-ratio: 1.8; margin-top: -50px; border: 1px solid #fff; }
+.creative-story { grid-area: story; font-size: clamp(20px, 1.9vw, 36px); line-height: 1.2; }
+.creative-layout > [data-photo="everyday-life"] { grid-area: everyday; align-self: end; }
+.creative-layout > [data-photo="selfie"] { grid-area: selfie; }
+.creative-layout > [data-photo="running"] { grid-area: running; }
+.creative-layout > [data-photo="everyday-life"],
+.creative-layout > [data-photo="selfie"],
+.creative-layout > [data-photo="running"] { width: 100%; height: auto; aspect-ratio: 1.8; border: 1px solid #fff; border-radius: 14px; }
+.creative-layout .hobby-photo-label { position: absolute; left: 5%; bottom: 3%; padding: 0; z-index: 1; font-size: clamp(28px, 4.8vw, 80px); -webkit-text-fill-color: transparent; -webkit-text-stroke: 1px #fff; }
+.creative-layout > [data-photo="selfie"] > img { object-position: center 35%; }
+@media (max-width: 640px) {
+ .creative-layout { grid-template-columns: 1fr; grid-template-areas: "nails" "story" "everyday" "selfie" "running"; padding: 24px 5%; }
+ .creative-layout .nails-photo { margin-top: 0; }
+}
+
+/* Use a static bold face: heavy variable-font contours can expose inner seams. */
+.beyond-section > h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    letter-spacing: -.025em;
+    font-size: clamp(30px, 4.8vw, 92px);
+    line-height: 1.12;
+}
+.beyond-section > h2 span {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #f5f5f2;
+    text-shadow: none;
+    font-synthesis: none;
+    paint-order: stroke fill;
+}
+
+.college-banner h2 span, .college-repeat span {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #111;
+    text-shadow: none;
+    font-synthesis: none;
+    paint-order: stroke fill;
+}
+
+.college-banner h2, .college-repeat { font-size: 62px; }
+.creative-layout > [data-photo="everyday-life"],
+.creative-layout > [data-photo="selfie"],
+.creative-layout > [data-photo="running"] { border: 1px solid #000; }
+.creative-layout > [data-photo="running"] > img { object-position: center 25%; }
+@media (max-width: 800px) {
+    .college-banner h2, .college-repeat { font-size: clamp(30px, 6.5vw, 52px); }
+}
+
+/* Match the full runner framing: face through shoes, with less empty road. */
+.creative-layout > [data-photo="selfie"],
+.creative-layout > [data-photo="running"] { aspect-ratio: 1.7; }
+.creative-layout > [data-photo="running"] > img { object-position: center 47%; }
+
+.blog-closing h2 { font-size: 64px; }
+.blog-motion { opacity: 0; translate: 0 28px; transition: opacity .75s ease, translate .75s cubic-bezier(.2,.7,.2,1); }
+.blog-motion.is-visible { opacity: 1; translate: 0 0; }
+.contents-folder summary { transition: filter .25s ease, transform .3s ease; transform-origin: bottom left; }
+@media (hover: hover) {
+ .contents-folder summary:hover { transform: translateY(-5px) rotate(-.5deg); filter: brightness(1.06); }
+ .creative-layout .photo-placeholder > img { transition: transform .5s ease; }
+ .creative-layout .photo-placeholder:hover > img { transform: scale(1.025); }
+}
+.contents-folder[open] nav { animation: folder-unfold .45s cubic-bezier(.2,.7,.2,1) both; transform-origin: bottom center; }
+@keyframes folder-unfold { from { opacity: 0; transform: translateY(22px) scaleY(.96); } to { opacity: 1; transform: translateY(0) scaleY(1); } }
+@media (max-width: 800px) { .blog-closing h2 { font-size: clamp(30px, 6vw, 54px); } }
+@media (prefers-reduced-motion: reduce) {
+ .blog-motion { opacity: 1; translate: none; transition: none; }
+ .contents-folder[open] nav { animation: none; }
+ .contents-folder summary, .creative-layout .photo-placeholder > img { transition: none; }
+ .contents-folder summary:hover, .creative-layout .photo-placeholder:hover > img { transform: none; }
+}
+
+/* Only the clickable folder cover lifts; surrounding layout stays fixed. */
+.contents-folder summary { transition: transform .3s cubic-bezier(.2,.7,.2,1); }
+.contents-folder summary .folder-title { transition: color .2s ease; }
+@media (hover: hover) and (pointer: fine) {
+    .contents-folder summary:hover { transform: translateY(-12px); filter: none; }
+    .contents-folder summary:hover .folder-title { color: #fff; }
+}
+.contents-folder summary:focus-visible { transform: translateY(-12px); }
+.contents-folder summary:focus-visible .folder-title { color: #fff; }
+@media (prefers-reduced-motion: reduce) {
+    .contents-folder summary { transition: none; }
+    .contents-folder summary:hover, .contents-folder summary:focus-visible { transform: none; }
+}
+
+/* Closing statement with social details alongside, matching the reference. */
+.blog-closing { padding: 32px 2% 44px; background: #101010; }
+.closing-contact-layout { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 4%; align-items: center; margin-top: 28px; }
+.blog-closing .closing-contact-layout h2 {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.18;
+    letter-spacing: -.025em;
+    text-align: left;
+    color: #fff;
+}
+.closing-contact-layout h2 > span { color: transparent; -webkit-text-fill-color: transparent; -webkit-text-stroke: 1px #fff; font-synthesis: none; }
+.closing-social > p, .closing-social > a { display: flex; align-items: center; gap: 10px; margin: 9px 0; font-size: clamp(16px, 1.3vw, 24px); font-weight: 300; overflow-wrap: anywhere; }
+.closing-social .social-mark { display: grid; place-items: center; flex-shrink: 0; width: 36px; height: 36px; border-radius: 6px; }
+.closing-social .facebook-mark { background: #3d5b99; font: 700 28px Arial, sans-serif; color: #fff; border-radius: 2px; }
+@media (max-width: 1200px) {
+    .closing-contact-layout { grid-template-columns: 1fr; gap: 24px; }
+    .blog-closing .closing-contact-layout h2 { font-size: clamp(30px, 5.3vw, 64px); }
+}
+@media (max-width: 640px) { .blog-closing { padding-inline: 5%; } .closing-social > p, .closing-social > a { font-size: 15px; } }
+
+.closing-contact-layout h2 { container-type: inline-size; }
+.blog-closing .closing-contact-layout h2 > span {
+    display: block;
+    white-space: nowrap;
+    font-size: min(64px, 6.9cqw);
+    line-height: 1.2;
+}
+.blog-closing .closing-contact-layout h2 > .closing-solid {
+    color: #fff;
+    -webkit-text-fill-color: #fff;
+    -webkit-text-stroke: 0;
+}
+
+.intro-copy > p:not(.intro-lead) { font-size: 20px; font-weight: 300; letter-spacing: .05em; line-height: 1.3; }
