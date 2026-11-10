@@ -476,31 +476,23 @@ body {
 }
 @media (prefers-reduced-motion: reduce) { .photo-stack-card { transition: none; } }
 
-/* Life Beyond the Keyboard: portrait first, then the music panel. */
-.beyond-heading > h2 { padding-bottom: 4px; }
+/* Desktop rows overlap at the edges of the gray and dark bands. */
 .beyond-heading { background: #101010; }
-.beyond-kicker {
-    padding: 0 2.4% 25px;
-    font-size: clamp(15px, 1.55vw, 30px);
-    font-weight: 400;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-}
 .music-band { grid-template-columns: minmax(0, 38fr) minmax(0, 62fr); }
-.music-band > p { padding: 0 6% 0 0; }
-.music-band .hobbies-portrait {
-    aspect-ratio: 2.6;
-    margin: -52px 0 -34px;
-    border-color: #111;
-}
-.hobbies-story { grid-template-columns: minmax(0, 57fr) minmax(0, 43fr); padding-block: 46px 88px; }
-.hobbies-story .music-card { margin-top: -78px; border: 1.5px solid #fff; min-width: 0; }
-@media (max-width: 1000px) {
-    .music-band .hobbies-portrait, .hobbies-story .music-card { margin: 0; }
-    .hobbies-story { padding-block: 24px 50px; }
+.music-band > p { padding: 0 10% 0 0; }
+.music-band .hobbies-portrait { aspect-ratio: 2.47; margin: 0; border-color: #111; }
+.hobbies-story { grid-template-columns: minmax(0, 57fr) minmax(0, 43fr); padding-block: 24px 50px; }
+.hobbies-story .music-card { border: 1.5px solid #fff; min-width: 0; }
+@media (min-width: 1001px) {
+    .beyond-heading { min-height: 9.9vw; }
+    .music-band { padding: 1.55vw 1.2%; gap: 2.4vw; }
+    .music-band .hobbies-portrait { align-self: start; margin: -4vw 0 -2.2vw; }
+    .hobbies-story { padding-block: 2.5vw 2.6vw; }
+    .hobbies-story > p { max-width: 51vw; }
+    .hobbies-story .music-card { margin-top: -3.5vw; }
+    .creative-layout .nails-photo { margin-top: -2.5vw; }
 }
 @media (max-width: 640px) {
     .music-band, .hobbies-story { grid-template-columns: 1fr; }
     .music-band > p { padding: 0; }
-    .beyond-kicker { padding: 8px 5% 24px; }
 }
