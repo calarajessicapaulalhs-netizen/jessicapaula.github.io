@@ -44,8 +44,8 @@ a:focus-visible, summary:focus-visible { outline: 3px solid #af96ff; outline-off
 .college-outro > p:first-child { font-size: clamp(17px, 1.6vw, 29px); line-height: 1.2; }
 .college-repeat { font-size: clamp(30px, 4.4vw, 84px); }
 .beyond-section { background: #101010; }
-.beyond-section > h2 { font-size: clamp(34px, 4.8vw, 92px); font-weight: 900; padding: 18px 2.4% 28px; line-height: 1.1; }
-.beyond-section > h2 span { color: transparent; -webkit-text-stroke: 1px #fff; }
+.beyond-heading > h2 { font-size: clamp(34px, 4.8vw, 92px); font-weight: 900; padding: 18px 2.4% 28px; line-height: 1.1; }
+.beyond-heading > h2 span { color: transparent; -webkit-text-stroke: 1px #fff; }
 .music-band { display: grid; grid-template-columns: 1fr 1.2fr; gap: 2.5%; background: #d9d9d9; color: #111; padding: 22px 1.3%; align-items: center; }
 .music-band > p { font-size: clamp(21px, 1.9vw, 36px); line-height: 1.2; padding: 0 20px; }
 .music-card { display: flex; gap: 20px; padding: 12px 20px; align-items: center; border-radius: 14px; background: #252223; height: clamp(105px, 10vw, 190px); overflow: hidden; }
@@ -137,13 +137,13 @@ a:focus-visible, summary:focus-visible { outline: 3px solid #af96ff; outline-off
 /* Grain belongs to the surfaces, so photos remain clear. */
 body::after { display: none; }
 .blog-nav, .blog-intro, .college-banner, .college-outro,
-.beyond-section > h2, .music-band, .hobbies-story, .beauty-story,
+.beyond-heading, .music-band, .hobbies-story, .beauty-story,
 .hobby-gallery, .blog-closing, .blog-footer {
     position: relative;
     isolation: isolate;
 }
 .blog-nav::before, .blog-intro::before, .college-banner::before, .college-outro::before,
-.beyond-section > h2::before, .music-band::before, .hobbies-story::before,
+.beyond-heading::before, .music-band::before, .hobbies-story::before,
 .beauty-story::before, .hobby-gallery::before, .blog-closing::before, .blog-footer::before {
     content: '';
     position: absolute;
@@ -265,7 +265,7 @@ body {
     -webkit-text-stroke: 1px #111;
     paint-order: stroke fill;
 }
-.beyond-section > h2 span {
+.beyond-heading > h2 span {
     color: transparent;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px #f5f5f2;
@@ -341,14 +341,14 @@ body {
 }
 
 /* Use a static bold face: heavy variable-font contours can expose inner seams. */
-.beyond-section > h2 {
+.beyond-heading > h2 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
     letter-spacing: -.025em;
     font-size: clamp(30px, 4.8vw, 92px);
     line-height: 1.12;
 }
-.beyond-section > h2 span {
+.beyond-heading > h2 span {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
     color: transparent;
@@ -475,3 +475,32 @@ body {
  .photo-stack-card { border-radius: 22px; }
 }
 @media (prefers-reduced-motion: reduce) { .photo-stack-card { transition: none; } }
+
+/* Life Beyond the Keyboard: portrait first, then the music panel. */
+.beyond-heading > h2 { padding-bottom: 4px; }
+.beyond-heading { background: #101010; }
+.beyond-kicker {
+    padding: 0 2.4% 25px;
+    font-size: clamp(15px, 1.55vw, 30px);
+    font-weight: 400;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.music-band { grid-template-columns: minmax(0, 38fr) minmax(0, 62fr); }
+.music-band > p { padding: 0 6% 0 0; }
+.music-band .hobbies-portrait {
+    aspect-ratio: 2.6;
+    margin: -52px 0 -34px;
+    border-color: #111;
+}
+.hobbies-story { grid-template-columns: minmax(0, 57fr) minmax(0, 43fr); padding-block: 46px 88px; }
+.hobbies-story .music-card { margin-top: -78px; border: 1.5px solid #fff; min-width: 0; }
+@media (max-width: 1000px) {
+    .music-band .hobbies-portrait, .hobbies-story .music-card { margin: 0; }
+    .hobbies-story { padding-block: 24px 50px; }
+}
+@media (max-width: 640px) {
+    .music-band, .hobbies-story { grid-template-columns: 1fr; }
+    .music-band > p { padding: 0; }
+    .beyond-kicker { padding: 8px 5% 24px; }
+}
